@@ -27,21 +27,21 @@ const footerQuickLinks = [
 const footerInfoLinks = [
   {
     display: "Privacy Policy",
-    url: "#",
+    url: "/privacypolicy",
   },
   {
-    display: "Membership",
-    url: "#",
-  },
-
-  {
-    display: "Purchases Guide",
-    url: "#",
+    display: "End User Licence agreement",
+    url: "/enduser",
   },
 
   {
-    display: "Terms of Service",
-    url: "#",
+    display: "Disclaimer",
+    url: "/disclaimer",
+  },
+
+  {
+    display: "Terms & Conditions",
+    url: "/termsconditions",
   },
 ];
 

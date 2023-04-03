@@ -6,12 +6,12 @@ import Footer from "../components/Footer/Footer";
 const SignUpAsPage = () => {
   return (
     <Fragment>
-      <Header />
+      {/* <Header /> */}
       
       <SignUpAs />
       
       
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };
