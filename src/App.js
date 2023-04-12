@@ -14,6 +14,7 @@ import AboutUs from "./components/About-us/AboutUs";
 import CompanyApp from "./components/Company-section/CompanyApp";
 import Login from './pages/Login'
 import DashBoard from "./components/DashBoard";
+import DashboardTeacher from './components/DashboardTeacher'
 // import SignUpAs from "./pages/SignUpAs";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/' element={ <Home />}/>
         <Route exact path='/login' element={<Login/>} />
         <Route exact path='/dashboard' element={<DashBoard/>} />
+        <Route exact path='/teacherdashboard' element={<DashboardTeacher />} />
         <Route exact path='/signupaspage' element={<SignUpAsPage/>} />
         <Route exact path='/signups' element={<SignUpS/>} />
         <Route exact path='/signupt' element={<SignUpT/>} />

@@ -4,13 +4,24 @@ import FormAction from "../FormAction";
 import FormExtra from "../FormExtra";
 import Input from "../Input";
 import DashBoard from '../DashBoard';
-import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import DashboardTeacher from '../DashboardTeacher'
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import {Routes, Route, BrowserRouter,useNavigate} from 'react-router-dom';
 const fields=loginFields;
 let fieldsState = {};
 fields.forEach(field=>fieldsState[field.id]='');
 
 export default function Login(){
     const [loginState,setLoginState]=useState(fieldsState);
+    const [showStudentDshboard,setShowStudentDshboard] =useState(true)
+    const [showTeacherDshboard,setShowTeacherDshboard] =useState(false)
+    const [checked, setChecked] = useState(false);
+    const handleChangeSwitch = (event) => {
+        setChecked(event.target.checked);
+      };
+    const navigate = useNavigate()
 
     const handleChange=(e)=>{
         setLoginState({...loginState,[e.target.id]:e.target.value})
@@ -19,14 +30,11 @@ export default function Login(){
     const handleSubmit=(e)=>{
         e.preventDefault();
         authenticateUser();
-        console.log("clicked")
-    //     <BrowserRouter>
-    //   <Routes>
+
+       checked ?  navigate('/teacherdashboard'): navigate('/dashboard') 
       
-    //     <Route exact path='/dashboard' element={<DashBoard/>} />
-        
-    //     </Routes>
-    //     </BrowserRouter>
+   
+       
     }
 
     //Handle Login API Integration here
@@ -35,6 +43,18 @@ export default function Login(){
     }
 
     return(
+        <div>
+        <div style={{display:'flex',flexDirection:'row'}}>
+        <Switch
+        checked={checked}
+        onChange={handleChangeSwitch}
+        defaultChecked color="warning"
+        inputProps={{ 'aria-label': 'controlled' }}
+        
+      />
+
+     <p style={{marginTop:0}}>Are you a teacher ? </p>
+    </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div className="-space-y-px">
             {
@@ -55,10 +75,21 @@ export default function Login(){
                 )
             }
         </div>
-
+        <Routes>
+    {  checked ?
+    <Route exact path='/teacherdashboard' element={<DashboardTeacher/>} /> 
+      
+    :
+    <Route exact path='/dashboard' element={<DashBoard/>} /> 
+    
+    }
+      
+      </Routes>
         <FormExtra/>
         <FormAction handleSubmit={handleSubmit} text="Login"/>
 
       </form>
+
+      </div>
     )
 }
