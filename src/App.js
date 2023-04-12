@@ -14,6 +14,7 @@ import AboutUs from "./components/About-us/AboutUs";
 import CompanyApp from "./components/Company-section/CompanyApp";
 import Login from './pages/Login'
 import DashBoard from "./components/DashBoard";
+import Index from "./pages/Home/Index";
 // import SignUpAs from "./pages/SignUpAs";
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home />}/>
         <Route exact path='/login' element={<Login/>} />
+        <Route exact path='/filter' element={<Index/>} />
         <Route exact path='/dashboard' element={<DashBoard/>} />
         <Route exact path='/signupaspage' element={<SignUpAsPage/>} />
         <Route exact path='/signups' element={<SignUpS/>} />

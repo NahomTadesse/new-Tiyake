@@ -18,7 +18,7 @@ const navLinks = [
   },
   {
     display: "Team",
-    url: "#",
+    url: "/filter",
   },
   {
     display: "Contact Us ",
