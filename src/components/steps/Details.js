@@ -2,7 +2,7 @@ import { useStepperContext } from "../../contexts/StepperContext";
 
 // import RadioButtonGroup from 'RadioButtonGroup';
 import { Container, Row, Col } from "reactstrap";
-import heroImg from "../../assests/images/hero-img1.png";
+import heroImg from "../../assets/images/hero-img1.png";
 export default function Details() {
   const { userData, setUserData } = useStepperContext();
 

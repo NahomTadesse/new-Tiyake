@@ -26,7 +26,7 @@ const navLinks = [
   },
   {
     display: "Login",
-    url: "#",
+    url: "/Login",
   },
 ];
 

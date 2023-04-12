@@ -4,20 +4,20 @@ import "./features.css";
 
 const FeatureData = [
   {
-    title: "Quick Learning",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    title: "Vision",
+    desc: "Gearing up students with practical questions for any educational examinations",
     icon: "ri-draft-line",
   },
 
   {
-    title: "All Time Support",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    title: "Mission",
+    desc: "To create a platform where students can access number of educational materials and professional guidance regardless of their predicament.",
     icon: "ri-discuss-line",
   },
 
   {
-    title: "Certification",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    title: "Objectives",
+    desc: "To reach 1 million students in one year time, To have ten thousand students as high performers in the national exams they take",
     icon: "ri-contacts-book-line",
   },
 ];

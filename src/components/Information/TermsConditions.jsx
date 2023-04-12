@@ -7,7 +7,15 @@ const TermsConditions = () => {
               <h2 className="mb-4 hero__title">
               PRIVACY POLICY 
               </h2>
-              <p className="mb-5" ></p>
+              <p className="mb-5" >
+
+
+
+
+
+
+                
+              </p>
               </div>
     )}
 

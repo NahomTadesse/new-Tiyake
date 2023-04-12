@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import courseImg1 from "../../assests/images/web-design.png";
-import courseImg2 from "../../assests/images/graphics-design.png";
-import courseImg3 from "../../assests/images/ui-ux.png";
+import courseImg1 from "../../assets/images/web-design.png";
+import courseImg2 from "../../assets/images/graphics-design.png";
+import courseImg3 from "../../assets/images/ui-ux.png";
 import "./signupas.css";
 import SignCard from "./SignCard";
 

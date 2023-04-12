@@ -10,7 +10,11 @@ import PrivacyPolicy from "./components/Information/PrivacyPolicy";
 import Disclaimer from "./components/Information/Disclaimer";
 import EndUser from "./components/Information/EndUser";
 import TermsConditions from "./components/Information/TermsConditions";
-
+import AboutUs from "./components/About-us/AboutUs";
+import CompanyApp from "./components/Company-section/CompanyApp";
+import Login from './pages/Login'
+import DashBoard from "./components/DashBoard";
+// import SignUpAs from "./pages/SignUpAs";
 function App() {
   return (
   <>
@@ -18,7 +22,8 @@ function App() {
   <BrowserRouter>
       <Routes>
         <Route path='/' element={ <Home />}/>
-        {/* <Route exact path='/login' element={<Login/>} /> */}
+        <Route exact path='/login' element={<Login/>} />
+        <Route exact path='/dashboard' element={<DashBoard/>} />
         <Route exact path='/signupaspage' element={<SignUpAsPage/>} />
         <Route exact path='/signups' element={<SignUpS/>} />
         <Route exact path='/signupt' element={<SignUpT/>} />
@@ -27,7 +32,8 @@ function App() {
         <Route exact path='/enduser' element={<EndUser/>} />
         <Route exact path='/termsconditions' element={<TermsConditions/>} />
         <Route exact path='/disclaimer' element={<Disclaimer/>} />
-       
+        <Route exact path='/aboutus' element={<AboutUs/>} />
+        <Route exact path='/companyapp' element={<CompanyApp/>} />
         </Routes>
         </BrowserRouter>
         <Footer />

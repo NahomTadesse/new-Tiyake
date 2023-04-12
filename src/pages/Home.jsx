@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header/Header";
 import HeroSection from "../components/Hero-Section/HeroSection";
-import CompanySection from "../components/Company-section/Company";
+import CompanyApp from "../components/Company-section/CompanyApp";
 
 import AboutUs from "../components/About-us/AboutUs";
 import Courses from "../components/Courses-section/Courses";
@@ -13,20 +13,24 @@ import Testimonials from "../components/Testimonial/Testimonials";
 
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
+import Team from "../components/Team/Team";
 
 const Home = () => {
   return (
     <Fragment>
     
       <HeroSection />
-      <CompanySection />
-      <AboutUs />
-      <Courses />
       <ChooseUs />
+      <CompanyApp />
+      
+      
       <Features />
-      <FreeCourse />
+      <AboutUs />
+      {/* <Courses /> */}
+      {/* <FreeCourse /> */}
       <Testimonials />
-      <Newsletter />
+      {/* <Newsletter /> */}
+      <Team />
       
     </Fragment>
   );

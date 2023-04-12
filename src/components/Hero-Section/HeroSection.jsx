@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import heroImg from "../../assests/images/school-gfcc68fa2e_1920.jpg";
+import heroImg from "../../assets/images/school-gfcc68fa2e_1920.jpg";
 import "./hero-section.css";
+// import { Link, animateScroll as scroll, } from 'react-scroll'
+
 
 const HeroSection = () => {
   return (
@@ -15,10 +17,12 @@ const HeroSection = () => {
               </h2>
               <p className="mb-5">
               Tiyake is a web app that allows students to learn and practice national examination questions dating back years. 
-               The focus of Tiyake is to help <br></br>students understand the questions and their answers, 
+               The focus of Tiyake is to help students understand the questions and their answers, 
                as well as track their progress through the questions and answers. <br></br>
                <p className="enroll ">
-            <a href="#"> Learm More</a>
+               {/* <Link to="about" smooth={true} offset={-200} duration={500}>Projects</Link> */}
+
+            <a href="#aboutus"> Learm More</a>
           </p>
               </p>
             </div>
