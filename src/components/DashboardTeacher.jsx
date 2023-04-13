@@ -8,7 +8,7 @@ import Leaderboard from "./LeaderBoard"
 
 export default function DashBoard(){
 const [showExam,setShowExam] = useState(false)
-const [showProfile,setShowProfile] = useState(false)
+const [showProfile,setShowProfile] = useState(true)
 const [showLeaderboard,setShowLeaderboard] = useState(false)
 
     return(

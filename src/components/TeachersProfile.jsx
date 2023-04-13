@@ -108,7 +108,7 @@ const [editable,setEditable] = React.useState(true)
  
 </div>
 </div>
-<Footer/>
+{/* <Footer/> */}
         </div>
     )
 }

@@ -8,7 +8,7 @@ import Leaderboard from "./LeaderBoard"
 export default function DashBoard(){
 const [showExam,setShowExam] = useState(false)
 const [showProfile,setShowProfile] = useState(false)
-const [showLeaderboard,setShowLeaderboard] = useState(false)
+const [showLeaderboard,setShowLeaderboard] = useState(true)
 
     return(
         <div style={{display:'flex',flexDirection:"row"}}>

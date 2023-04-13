@@ -14,7 +14,11 @@ import AboutUs from "./components/About-us/AboutUs";
 import CompanyApp from "./components/Company-section/CompanyApp";
 import Login from './pages/Login'
 import DashBoard from "./components/DashBoard";
+// <<<<<<< HEAD
 import Index from "./pages/Home/Index";
+// =======
+import DashboardTeacher from './components/DashboardTeacher'
+// >>>>>>> e757b524ccb2f25d05d9e8f9b4af25f403ef2c65
 // import SignUpAs from "./pages/SignUpAs";
 function App() {
   return (
@@ -26,6 +30,7 @@ function App() {
         <Route exact path='/login' element={<Login/>} />
         <Route exact path='/filter' element={<Index/>} />
         <Route exact path='/dashboard' element={<DashBoard/>} />
+        <Route exact path='/teacherdashboard' element={<DashboardTeacher />} />
         <Route exact path='/signupaspage' element={<SignUpAsPage/>} />
         <Route exact path='/signups' element={<SignUpS/>} />
         <Route exact path='/signupt' element={<SignUpT/>} />
