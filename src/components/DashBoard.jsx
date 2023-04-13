@@ -20,7 +20,9 @@ const [showLeaderboard,setShowLeaderboard] = useState(true)
 
 <div style={{display:'flex',alignSelf:'center',marginTop:20,flexDirection:'column'}}>
 <Button onClick={()=>{setShowExam(true); setShowProfile(false); setShowLeaderboard(false)}} style={{color:'white'}}> Take Exam</Button>
+<a href="/filter">
 <Button style={{color:'white'}}> Teachers</Button>
+</a>
 <Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(true)}}> Leader Board</Button>
 
 </div>

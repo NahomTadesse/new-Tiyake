@@ -17,7 +17,7 @@ const FilterPanel = ({
 }) => (
   <div>
     <div className='input-group'>
-      {/* <p className='label'>Category</p> */}
+      <p className='label'>Category</p>
       <FilterListToggle
         options={categoryList}
         value={selectedCategory}

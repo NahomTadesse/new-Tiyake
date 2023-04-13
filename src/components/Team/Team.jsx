@@ -16,7 +16,7 @@ function Team () {
        
                     <div className="col-md-12 text-center">
 
-                          <h2 className="section-title">The Team Behind Pacifico</h2>
+                          <h2 className="section-title">The Team </h2>
 
                           <p className="section-subtitle">{message}</p>
                           
@@ -32,7 +32,9 @@ function Team () {
     
     <div className="team-info"><p>SEO Specialist</p></div>
 
-    <p>Graduating with a degree in Spanish and English, Alexandra has always loved writing and now she’s lucky enough to do it as part of her new job inside our agency.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt mollitia nostrum harum eos praesentium odit a sed quod
+                aut fugit. </p>
 
     <ul className="team-icon">
     
@@ -60,7 +62,9 @@ function Team () {
                       
                       <div className="team-info"><p>SEO Specialist</p></div>
 
-                      <p>Graduating with a degree in Spanish and English, Alexandra has always loved writing and now she’s lucky enough to do it as part of her new job inside our agency.</p>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt mollitia nostrum harum eos praesentium odit a sed quod
+                aut fugit.</p>
                   
                       <ul className="team-icon">
                       
@@ -87,7 +91,9 @@ function Team () {
                       
                       <div className="team-info"><p>Marketing Manager</p></div>
 
-                      <p>Elisa first fell in love with digital marketing at the university. He loves to learn, and looks forward to being part of this new exciting industry for many years.</p>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt mollitia nostrum harum eos praesentium odit a sed quod
+                aut fugit.</p>
                   
                       <ul className="team-icon">
                       
