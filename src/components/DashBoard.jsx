@@ -26,7 +26,7 @@ const [showTeacherProfile, setShowTeacherProfile] = useState(false);
 </a>
 <Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(true); setShowTeacherProfile(false)}}> Leader Board</Button>
 
-<Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(true)}}> Leader Board</Button>
+{/* <Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(true)}}> Leader Board</Button> */}
 </div>
 
 </div>

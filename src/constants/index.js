@@ -42,7 +42,7 @@ export const ratingList = [
 export const dataList = [
   {
     id: 1,
-    title: 'Teacher Henock',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile"> Teacher Henock</a>,
     serviceTime: 'henock@gmail.com',
     deliveryFee: 3.44,
     category: 'place',
@@ -53,7 +53,7 @@ export const dataList = [
   },
   {
     id: 2,
-    title: 'Teacher Nahom',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Nahom</a>,
     serviceTime: 'nahom@gmail.com',
     deliveryFee: 4.94,
     category: 'place',
@@ -64,7 +64,7 @@ export const dataList = [
   },
   {
     id: 3,
-    title: 'Teacher Nahom',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Nahom</a>,
     serviceTime: 'nahom@gmail.com',
     deliveryFee: 4.94,
     category: 'place',
@@ -75,7 +75,7 @@ export const dataList = [
   },
   {
     id: 4,
-    title: 'Teacher Nahom',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Nahom</a>,
     serviceTime: 'nahom@gmail.com',
     deliveryFee: 2.14,
     category: 'place',
@@ -86,7 +86,7 @@ export const dataList = [
   },
   {
     id: 5,
-    title: 'Teacher Abel',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Abel</a>,
     serviceTime: 'abel@gmail.com',
     deliveryFee: 6.79,
     category: 'place',
@@ -97,7 +97,7 @@ export const dataList = [
   },
   {
     id: 6,
-    title: 'Teacher Abel',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Abel</a>,
     serviceTime: 'abel@gmail.com',
     deliveryFee: 2.87,
     category: 'place',
@@ -108,7 +108,7 @@ export const dataList = [
   },
   {
     id: 7,
-    title: 'Teacher Abel',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Abel</a>,
     serviceTime: 'abel@gmail.com',
     deliveryFee: 8.5,
     category: 'dish',
@@ -119,7 +119,7 @@ export const dataList = [
   },
   {
     id: 8,
-    title: 'Teacher Abel',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Abel</a>,
     serviceTime: 'abel@gmail.com',
     deliveryFee: 1.8,
     category: 'dish',
@@ -130,7 +130,7 @@ export const dataList = [
   },
   {
     id: 9,
-    title: 'Teacher Gedion',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Gedion</a>,
     serviceTime: 'gedion@gmail.com',
     deliveryFee: 3.33,
     category: 'dish',
@@ -141,7 +141,7 @@ export const dataList = [
   },
   {
     id: 10,
-    title: 'Teacher Gedion',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Gedion</a>,
     serviceTime: 'gedion@gmail.com',
     deliveryFee: 1.9,
     category: 'dish',
@@ -152,7 +152,7 @@ export const dataList = [
   },
   {
     id: 11,
-    title: 'Teacher Gedion',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Gedion</a>,
     serviceTime: 'gedion@gmail.com',
     deliveryFee: 4.1,
     category: 'dish',
@@ -163,7 +163,7 @@ export const dataList = [
   },
   {
     id: 12,
-    title: 'Teacher Gedion',
+    title: <a style={{color:'black', textDecoration:'none'}} href="/teacherprofile">Teacher Gedion</a>,
     serviceTime: 'gedion@gmail.com',
     deliveryFee: 1.5,
     category: 'dish',
