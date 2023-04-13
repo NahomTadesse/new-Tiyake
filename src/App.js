@@ -18,6 +18,7 @@ import DashBoard from "./components/DashBoard";
 import Index from "./pages/Home/Index";
 // =======
 import DashboardTeacher from './components/DashboardTeacher'
+import ProfilePage from "./components/profilepage";
 // >>>>>>> e757b524ccb2f25d05d9e8f9b4af25f403ef2c65
 // import SignUpAs from "./pages/SignUpAs";
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route exact path='/disclaimer' element={<Disclaimer/>} />
         <Route exact path='/aboutus' element={<AboutUs/>} />
         <Route exact path='/companyapp' element={<CompanyApp/>} />
+        <Route exact path='/teacherprofile' element={<ProfilePage/>} />
         </Routes>
         </BrowserRouter>
         <Footer />
