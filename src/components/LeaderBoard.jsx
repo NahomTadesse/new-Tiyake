@@ -76,7 +76,7 @@ const students = [
         <div>
         {/* <Navbar/> */}
         <TableContainer component={Paper}>
-        <Table sx={{ maxWidth: 1100,marginLeft:20,marginTop:15}} aria-label="customized table">
+        <Table sx={{ maxWidth: 900,marginLeft:10,marginRight:10,marginTop:10}} aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Rank</StyledTableCell>

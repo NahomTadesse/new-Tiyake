@@ -219,7 +219,7 @@ return(
          <Button style={{fontSize:14}} onClick={()=>{ setShowFirst(!showFirst)
     
       
-  }}>{ showFirst ? "Hide Hint":"Show Hint"}</Button>
+  }}>{ showFirst ? "Hide Hint":"Show Hint ?"}</Button>
   
 
   { showFirst &&  
@@ -247,8 +247,8 @@ return(
 </div>
 {profiles.map((pro,index)=>{
   return(
-    <div style={{}}> 
-<div style={{display:'flex', flexDirection:'row',margin:3}}> 
+    <div > 
+<div style={{display:'flex', flexDirection:'row'}}> 
 <img src={img1} alt="" height="20" width="20"/>
 <section style={{fontWeight:'bold',left:10}}>
 {pro.Name}
@@ -490,7 +490,7 @@ const examMode=()=>{
   </div> */}
   <div style={{height:40,width:250,borderWidth:1,display:'flex',flexDirection:'row',marginTop:150,marginLeft:20}}>
     <img src={img2} alt="" height={30} width='20' style={{padding:1}} />
-    <section style={{marginTop:5}}>{`26 Minutes | 16 Seconds Left`}</section>
+    <section style={{marginTop:-60}}>{`26 Minutes | 16 Seconds Left`}</section>
 
   </div>
   <></>
@@ -704,7 +704,7 @@ const quizMode=()=>{
   </div> */}
   <div style={{height:40,width:250,borderWidth:1,display:'flex',flexDirection:'row',marginTop:150,marginLeft:20}}>
     <img src={img2} alt="" height={30} width='20' style={{padding:1}} />
-    <section style={{marginTop:5}}>{`26 Minutes | 16 Seconds Left`}</section>
+    <section style={{marginTop:-60}}>{`26 Minutes | 16 Seconds Left`}</section>
 
   </div>
   <></>

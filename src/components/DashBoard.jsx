@@ -4,12 +4,14 @@ import img1 from '../assets/images/profile.png'
 import Button from '@mui/material/Button';
 import TeachersProfile from './TeachersProfile';
 import Leaderboard from "./LeaderBoard"
+import TeacherFilter from './TeacherFilter';
 
 export default function DashBoard(){
 const [showExam,setShowExam] = useState(false)
 const [showProfile,setShowProfile] = useState(false)
 const [showLeaderboard,setShowLeaderboard] = useState(true)
 const [showTeacherProfile, setShowTeacherProfile] = useState(false);
+const [showFilter,setShowFilter] = useState(false)
 
     return(
         <div style={{display:'flex',flexDirection:"row"}}>
@@ -20,11 +22,9 @@ const [showTeacherProfile, setShowTeacherProfile] = useState(false);
 </div>
 
 <div style={{display:'flex',alignSelf:'center',marginTop:20,flexDirection:'column'}}>
-<Button onClick={()=>{setShowExam(true); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(false)}} style={{color:'white'}}> Take Exam</Button>
-<a href="/filter">
-<Button style={{color:'white'}}> Teachers</Button>
-</a>
-<Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(true); setShowTeacherProfile(false)}}> Leader Board</Button>
+<Button onClick={()=>{setShowExam(true); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(false);setShowFilter(false)}} style={{color:'white'}}> Take Exam</Button>
+<Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(false);setShowFilter(true)}}> Teachers</Button>
+<Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(true); setShowTeacherProfile(false);setShowFilter(false)}}> Leader Board</Button>
 
 {/* <Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(true)}}> Leader Board</Button> */}
 </div>
@@ -32,7 +32,7 @@ const [showTeacherProfile, setShowTeacherProfile] = useState(false);
 </div>
 <div style={{width:window.innerWidth}}>
 {
-showExam ? <StudentExam/> : showProfile ? <TeachersProfile/>: showLeaderboard ? <Leaderboard/>:''
+showExam ? <StudentExam/> : showProfile ? <TeachersProfile/>: showLeaderboard ? <Leaderboard/>: showFilter ? <TeacherFilter/> : ''
 
 }
 </div>

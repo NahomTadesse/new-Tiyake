@@ -6,10 +6,12 @@ import TeachersProfile from './TeachersProfile';
 import AddExamComponent from './AddExamComponent'
 import Leaderboard from "./LeaderBoard"
 
+
 export default function DashBoard(){
 const [showExam,setShowExam] = useState(false)
 const [showProfile,setShowProfile] = useState(true)
 const [showLeaderboard,setShowLeaderboard] = useState(false)
+
 
     return(
         <div style={{display:'flex',flexDirection:"row"}}>

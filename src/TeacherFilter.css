@@ -1,0 +1,45 @@
+
+.cardContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+    margin-bottom: 40px;
+     
+}
+
+.personalCard{
+height: fit-content;
+min-width: 250px;
+margin-bottom: 10px;
+padding: 1px;
+margin-left: 15px;
+box-shadow: 3px 3px 5px black;
+margin-right: 10px;
+
+}
+.profile{
+    
+    flex-direction: column;
+}
+.teacherCard{
+    width: 80%;
+ 
+    box-shadow: 3px 3px 9px black;
+  
+    flex-direction: row;
+    
+}
+.filterHeader {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+   
+}
+.searchInput{
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
