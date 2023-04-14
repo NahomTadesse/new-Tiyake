@@ -26,7 +26,7 @@ import ProfilePage from "./components/profilepage";
 function App() {
   return (
     <div>
-      {/* <Header />
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -51,8 +51,7 @@ function App() {
           <Route exact path="/teacherprofile" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
-      <Footer /> */}
-      <StudentExamPageTwo />
+      <Footer />
     </div>
   );
 }

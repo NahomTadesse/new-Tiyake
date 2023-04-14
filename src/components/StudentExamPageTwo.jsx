@@ -243,16 +243,16 @@ return(
   }
   <div>
     <div style={{backgroundColor:"#ff5f1f"}}>
-<section style={{textAlign:'center',color:'white'}}> Comment Section</section>
+<div style={{textAlign:'center',color:'white'}}> Comment Section</div>
 </div>
 {profiles.map((pro,index)=>{
   return(
     <div > 
 <div style={{display:'flex', flexDirection:'row'}}> 
 <img src={img1} alt="" height="20" width="20"/>
-<section style={{fontWeight:'bold',left:10}}>
+<div style={{fontWeight:'bold',left:10}}>
 {pro.Name}
-</section>
+</div>
 </div>
 <div style={{marginLeft:25, marginBottom:10}}>
 {pro.Comment}
@@ -490,7 +490,7 @@ const examMode=()=>{
   </div> */}
   <div style={{height:40,width:250,borderWidth:1,display:'flex',flexDirection:'row',marginTop:150,marginLeft:20}}>
     <img src={img2} alt="" height={30} width='20' style={{padding:1}} />
-    <section style={{marginTop:-60}}>{`26 Minutes | 16 Seconds Left`}</section>
+    <div style={{marginTop:10}}>{`26 Minutes | 16 Seconds Left`}</div>
 
   </div>
   <></>
@@ -704,7 +704,7 @@ const quizMode=()=>{
   </div> */}
   <div style={{height:40,width:250,borderWidth:1,display:'flex',flexDirection:'row',marginTop:150,marginLeft:20}}>
     <img src={img2} alt="" height={30} width='20' style={{padding:1}} />
-    <section style={{marginTop:-60}}>{`26 Minutes | 16 Seconds Left`}</section>
+    <div style={{marginTop:10}}>{`26 Minutes | 16 Seconds Left`}</div>
 
   </div>
   <></>

@@ -216,16 +216,16 @@ return(
   }
   <div>
     <div style={{backgroundColor:'#ff5f1f',marginBottom:10}}>
-<section style={{textAlign:'center',color:'white'}}> Comment Section</section>
+<div style={{textAlign:'center',color:'white'}}> Comment Section</div>
 </div>
 {profiles.map((pro,index)=>{
   return(
     <div style={{}}> 
 <div style={{display:'flex', flexDirection:'row',margin:3}}> 
 <img src={img1} alt="" height="20" width="20"/>
-<section style={{fontWeight:'bold',left:10}}>
+<div style={{fontWeight:'bold',left:10}}>
 {pro.Name}
-</section>
+</div>
 </div>
 <div style={{marginLeft:25, marginBottom:10}}>
 {pro.Comment}
