@@ -97,7 +97,7 @@ export default function AddExam(){
       <div style={{}}>
        {/* <Navbar/> */}
        </div>
-      <Box sx={{ width: '80%', m: "3rem auto 0" ,marginTop:5,height:window.innerHeight,marginBottom:1}}>
+      <Box sx={{ width: '80%', m: "3rem auto 0" ,marginTop:5,height:window.innerHeight,marginBottom:10}}>
     
         <Stepper nonLinear activeStep={activeStep}>
           {steps.map((label, index) => (

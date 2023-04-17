@@ -132,17 +132,16 @@ return(
     
 
     </FormControl>
+    <div style={{marginTop:40,marginLeft:200}}>
     { index!=0 &&
     
-    <Button variant="contained" href="#contained-buttons"  style={{marginTop :20,marginBottom:20,marginLeft:10,width:50,
-          alignSelf:'flex-end',marginLeft:10,marginTop:200,backgroundColor:"#ff5f1f"}}
+    <Button style={{backgroundColor:'#ff5f1f',color:"white",marginRight:10}}
           onClick={()=>{setX(x-1)}}
           >
   Prev
    </Button>}
    {index !== questions.length-1 &&
-        <Button variant="contained" href="#contained-buttons"  style={{marginTop :20,marginBottom:20,marginLeft:10,width:50,
-          alignSelf:'flex-end',marginLeft:10,marginTop:200,backgroundColor:"#ff5f1f"}}
+        <Button style={{backgroundColor:'#ff5f1f',color:'white'}}
           onClick={()=>{ index == questions.length-1 ? handleClickOpen() : setX(x+1)  }}
           >
    { index == questions.length-1 ? 
@@ -150,8 +149,8 @@ return(
    'Finish' :'Next'}
    </Button>
    
-  
    }
+   </div>
 
    <Dialog
         open={open}
@@ -172,7 +171,7 @@ return(
         </DialogActions>
       </Dialog>
       {  index+1 == x &&
-    <div style={{fontSize:18}}>
+    <div style={{fontSize:18,marginTop:20}}>
       {ques.Explanation}
 
 
