@@ -43,20 +43,23 @@ export default function Login(){
     }
 
     return(
-        <div>
-        <div style={{display:'flex',flexDirection:'row'}}>
+        <div style={{display:'flex',alignSelf:"center",justifyContent:"center"}}>
+
+        <div style={{display:'flex',flexDirection:'row',}}>
         <Switch
         checked={checked}
         onChange={handleChangeSwitch}
         defaultChecked color="warning"
         inputProps={{ 'aria-label': 'controlled' }}
+     
         
       />
 
      <p style={{marginTop:0}}>Are you a teacher ? </p>
     </div>
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-        <div className="-space-y-px">
+    <div >
+        <form style={{width: window.innerWidth/4,marginRight:200}} onSubmit={handleSubmit}>
+        <div style={{}}>
             {
                 fields.map(field=>
                         <Input
@@ -70,6 +73,7 @@ export default function Login(){
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
+                            
                     />
                 
                 )
@@ -89,6 +93,7 @@ export default function Login(){
         <FormAction handleSubmit={handleSubmit} text="Login"/>
 
       </form>
+      </div>
 
       </div>
     )

@@ -10,6 +10,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import trophyImg from '../assets/images/trophy.png';
+import starImg from '../assets/images/star.png' 
+import rankingsImg from '../assets/images/rankings.png' 
+import userImg from '../assets/images/user.png' 
+import checkImg from '../assets/images/check.png' 
+import awardImg from '../assets/images/award.png' 
+
 // import Footer from './Footer';
 // import Navbar from './Navbar'
 // import Header from './Header/Header'
@@ -73,24 +80,42 @@ const students = [
 
 
     return(
-        <div>
+        <div >
+<div style={{display:'flex',justifyContent:"center"}}>
+          <div style={{textAlign:'center',fontSize:24,marginTop:10,marginBottom:10,fontWeight:'bold'}}>
+            TOP 50 STUDENTS
+          </div>
+          <img src={trophyImg} alt="" height={50} width={50}/>
+          </div>
         {/* <Navbar/> */}
-        <TableContainer component={Paper}>
-        <Table sx={{ maxWidth: 900,marginLeft:10,marginRight:10,marginTop:10}} aria-label="customized table">
+        <TableContainer component={Paper} sx={{ height: window.innerHeight, maxWidth: 1100,marginLeft:10,marginRight:10 }}>
+        <Table sx={{}} stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>Rank</StyledTableCell>
-              <StyledTableCell align="left">Name</StyledTableCell>
-              <StyledTableCell align="left">Points</StyledTableCell>
-              <StyledTableCell align="left">Award</StyledTableCell>
-             
+              <StyledTableCell>Rank
+              <img src={rankingsImg} alt="" height={30} width={30}/>
+              </StyledTableCell>
+              <StyledTableCell align="left">Name
+              <img src={userImg} alt="" height={30} width={30}/>
+              </StyledTableCell>
+              <StyledTableCell align="left">Points
+              <img src={checkImg} alt="" height={30} width={30}/>
+              </StyledTableCell>
+              <StyledTableCell align="left">Award
+              <img src={awardImg} alt="" height={30} width={30}/>
+              </StyledTableCell>
+              
             </TableRow>
           </TableHead>
           <TableBody>
             {students.map((row,index) => (
               <StyledTableRow key={row.Rank}>
-                <StyledTableCell component="th" scope="row">
+                <StyledTableCell component="th" scope="row" style={{display:'flex',flexDirection:'row'}}>
                   {row.Rank}
+                  {row.Rank <= 5 && 
+                    <img src={starImg} alt="" height={20} width={20} style={{marginLeft:5}}/>
+                    
+                  }
                 </StyledTableCell>
                 <StyledTableCell align="left">{row.Name}</StyledTableCell>
                 <StyledTableCell align="left">{row.Points}</StyledTableCell>

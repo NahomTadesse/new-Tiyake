@@ -80,7 +80,9 @@ style={{width:200,margin:30}}
         />
          
         </div>
-        <Button variant="contained" href="#contained-buttons"  style={{marginTop :-5,marginBottom:20,marginLeft:-280}}>
+        <Button variant="contained" href="#contained-buttons"  style={{marginTop :-5,marginBottom:20,marginLeft:-280
+        ,backgroundColor:"#ff5f1f",color:'white'
+        }}>
   Add Choices
 </Button>
 
@@ -152,7 +154,7 @@ style={{width:200,margin:30}}
           style={{width:450,left:19,marginTop:20,marginBottom:20}}
           maxRows={10}
         />
-              <Button variant="contained" href="#contained-buttons">
+              <Button variant="contained" href="#contained-buttons" style={{ backgroundColor:"#ff5f1f",color:'white'}}>
   Add Question
 </Button>
          

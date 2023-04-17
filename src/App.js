@@ -16,6 +16,7 @@ import Login from "./pages/Login";
 import DashBoard from "./components/DashBoard";
 import TeacherFilter from "./components/TeacherFilter";
 import StudentExamPageTwo from "./components/StudentExamPageTwo";
+
 // <<<<<<< HEAD
 import Index from "./pages/Home/Index";
 // =======
@@ -30,25 +31,22 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
 
-          <Route exact path="/dashboard" element={<DashBoard />} />
-          <Route
-            exact
-            path="/teacherdashboard"
-            element={<DashboardTeacher />}
-          />
-          <Route exact path="/signupaspage" element={<SignUpAsPage />} />
-          <Route exact path="/signups" element={<SignUpS />} />
-          <Route exact path="/signupt" element={<SignUpT />} />
-          <Route exact path="/signupts" element={<SignUpTS />} />
-          <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
-          <Route exact path="/enduser" element={<EndUser />} />
-          <Route exact path="/termsconditions" element={<TermsConditions />} />
-          <Route exact path="/disclaimer" element={<Disclaimer />} />
-          <Route exact path="/aboutus" element={<AboutUs />} />
-          <Route exact path="/companyapp" element={<CompanyApp />} />
-          <Route exact path="/teacherprofile" element={<ProfilePage />} />
+          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/teacherdashboard" element={<DashboardTeacher />} />
+          <Route path="/signupaspage" element={<SignUpAsPage />} />
+          <Route path="/signups" element={<SignUpS />} />
+          <Route path="/signupt" element={<SignUpT />} />
+          <Route path="/signupts" element={<SignUpTS />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/enduser" element={<EndUser />} />
+          <Route path="/termsconditions" element={<TermsConditions />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/companyapp" element={<CompanyApp />} />
+          <Route path="/teacherprofile" element={<ProfilePage />} />
+          <Route path="/teacherprofile" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

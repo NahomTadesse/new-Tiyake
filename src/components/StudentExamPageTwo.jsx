@@ -27,6 +27,7 @@ import Input from '@mui/material/Input';
 import InputAdornment from '@mui/material/InputAdornment';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -156,7 +157,7 @@ return(
 {  showExplanation && <div>
       {ques.Explanation}
       </div>}
-
+     
    <Dialog
         open={open}
         TransitionComponent={Transition}
@@ -168,7 +169,14 @@ return(
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
           <div>
+              <ProgressBar now={80.5} />
             <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1>Question Nmber : 1,3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1> Question Nmber : 2
           </div>
           <div>
             <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
@@ -202,7 +210,7 @@ return(
 
 
 
-<div style={{height:500,width:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,
+<div style={{width:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,
 marginLeft:50}}>
   
 
@@ -263,7 +271,7 @@ return(
 
 }
 
-      <FormControl variant="standard" style={{position:'relative',marginLeft:10,top:10}}>
+      <FormControl variant="standard" style={{position:'relative',marginLeft:10,marginTop:10,marginBottom:5}}>
         <InputLabel htmlFor="input-with-icon-adornment">
         Add Comment
         </InputLabel>
@@ -402,7 +410,14 @@ const examMode=()=>{
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
             <div>
+            <ProgressBar now={80.5} />
             <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1> Question Nmber : 1,3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1> Question Nmber : 1
           </div>
           <div>
             <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
@@ -616,7 +631,14 @@ const quizMode=()=>{
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
             <div>
+            <ProgressBar now={80.5} />
             <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1> Question Nmber : 1,3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1>Question Nmber :  1
           </div>
           <div>
             <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes

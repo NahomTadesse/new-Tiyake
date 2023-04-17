@@ -11,15 +11,7 @@ const navLinks = [
     display: "About",
     url: "#",
   },
-
-  {
-    display: "Tests",
-    url: "#",
-  },
-  {
-    display: "Team",
-    url: "/filter",
-  },
+ 
   {
     display: "Contact Us ",
     url: "#",

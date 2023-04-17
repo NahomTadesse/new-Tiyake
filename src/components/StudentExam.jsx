@@ -97,7 +97,7 @@ export default function AddExam(){
       <div style={{}}>
        {/* <Navbar/> */}
        </div>
-      <Box sx={{ width: '80%', m: "3rem auto 0" ,marginTop:20,marginBottom:10}}>
+      <Box sx={{ width: '80%', m: "3rem auto 0" ,marginTop:5,height:window.innerHeight,marginBottom:1}}>
     
         <Stepper nonLinear activeStep={activeStep}>
           {steps.map((label, index) => (
@@ -149,7 +149,7 @@ export default function AddExam(){
                 <Button onClick={handleNext} sx={{ mr: 1 }} style={{backgroundColor:"#ff5f1f",color:'white'}} >
                   Next
                 </Button>
-                {activeStep !== steps.length &&
+                {/* {activeStep !== steps.length-1 &&
                   (completed[activeStep] ? (
                     <Typography variant="caption" sx={{ display: 'inline-block' }}>
                       Step {activeStep + 1} already completed
@@ -160,7 +160,7 @@ export default function AddExam(){
                         ? 'Finish'
                         : 'Complete Step'}
                     </Button>
-                  ))}
+                  ))} */}
               </Box>
             </React.Fragment>
           )}

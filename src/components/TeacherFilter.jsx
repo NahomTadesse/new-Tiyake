@@ -9,11 +9,14 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import {Routes, Route, BrowserRouter,useNavigate} from 'react-router-dom';
+import ProfilePage from './profilepage'
 
 export default function TeacherFilter(){
 
     const [filterr, setFilter] = useState();
     const [search, setSearch] = useState('');
+    const navigate = useNavigate()
 
     const handleChange = (event) => {
       setFilter(event.target.value);
@@ -58,7 +61,7 @@ export default function TeacherFilter(){
     ]
 
 const handleClick=()=>{
-
+  navigate('/teacherprofile')
 }
 
 const teacherDetail =()=>{

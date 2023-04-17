@@ -6,6 +6,8 @@ import Select from '@mui/material/Select';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import StudentExamPageTwo from './StudentExamPageTwo';
+import Button from '@mui/material/Button';
+import { BedTwoTone } from '@mui/icons-material';
 
 const examType = React.createContext();
 
@@ -37,7 +39,7 @@ export default function StudentExamPageOne() {
       </examType.Provider>
 
        const examMode = ()=>{
-        if(level =="Grade 12 Exit Exam" || level == "Remedian") {
+       
           return(
           <div>
             <Autocomplete
@@ -56,33 +58,33 @@ export default function StudentExamPageOne() {
           />
           </div>
           )
-        }
         
-        else if(level =="University Exit Exam"){
         
-   return(
-    <div>
-    <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={uniFields}
-      sx={{ width: 300 ,marginTop:3}}
-      renderInput={(params) => <TextField {...params} label="Course" />}
-    />
-    <Autocomplete
-    disablePortal
-    id="combo-box-demo"
-    options={ yearData}
-    sx={{ width: 300 ,marginTop:3}}
-    renderInput={(params) => <TextField {...params} label="Year" />}
-  />
-  </div>
-  )
-        }
+  //       else if(level =="University Exit Exam"){
+        
+  //  return(
+  //   <div>
+  //   <Autocomplete
+  //     disablePortal
+  //     id="combo-box-demo"
+  //     options={uniFields}
+  //     sx={{ width: 300 ,marginTop:3}}
+  //     renderInput={(params) => <TextField {...params} label="Course" />}
+  //   />
+  //   <Autocomplete
+  //   disablePortal
+  //   id="combo-box-demo"
+  //   options={ yearData}
+  //   sx={{ width: 300 ,marginTop:3}}
+  //   renderInput={(params) => <TextField {...params} label="Year" />}
+  // />
+  // </div>
+  // )
+  //       }
 
        }
        const practiceMode = ()=>{
-        if(level =="Grade 12 Exit Exam" || level == "Remedian") {
+     
           return(
           <div>
             <Autocomplete
@@ -101,33 +103,33 @@ export default function StudentExamPageOne() {
           />
           </div>
           )
-        }
+       
         
-        else if(level =="University Exit Exam"){
+  //       else if(level =="University Exit Exam"){
         
-   return(
-    <div>
-    <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={uniFields}
-      sx={{ width: 300 ,marginTop:3}}
-      renderInput={(params) => <TextField {...params} label="Topic" />}
-    />
-    <Autocomplete
-    disablePortal
-    id="combo-box-demo"
-    options={ yearData}
-    sx={{ width: 300 ,marginTop:3}}
-    renderInput={(params) => <TextField {...params} label="Year" />}
-  />
-  </div>
-  )
-        }
+  //  return(
+  //   <div>
+  //   <Autocomplete
+  //     disablePortal
+  //     id="combo-box-demo"
+  //     options={uniFields}
+  //     sx={{ width: 300 ,marginTop:3}}
+  //     renderInput={(params) => <TextField {...params} label="Topic" />}
+  //   />
+  //   <Autocomplete
+  //   disablePortal
+  //   id="combo-box-demo"
+  //   options={ yearData}
+  //   sx={{ width: 300 ,marginTop:3}}
+  //   renderInput={(params) => <TextField {...params} label="Year" />}
+  // />
+  // </div>
+  // )
+  //       }
 
        }
        const quizMode = ()=>{
-        if(level =="Grade 12 Exit Exam" || level == "Remedian") {
+      
 return(
   <div>
 
@@ -177,109 +179,79 @@ return(
 )
 
 
-        }
-        else if(level =="University Exit Exam"){
         
-          return(
-           <div>
+//         else if(level =="University Exit Exam"){
+        
+//           return(
+//            <div>
 
-<Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={ uniFields}
-      sx={{ width: 300 ,marginTop:3}}
-      renderInput={(params) => <TextField {...params} label="Course" />}
-    />
-    <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={ Unichapter}
-      sx={{ width: 300 ,marginTop:3}}
-      renderInput={(params) => <TextField {...params} label="Chapter" />}
-    />
-        <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={GeneralUniField}
-      sx={{ width: 300 ,marginTop:3}}
-      renderInput={(params) => <TextField {...params} label="Topic" />}
-    />
-     <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">No. of Questions</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={NumberOfQuestions}
-          onChange={handleChangeNumber}
-          label="No. of Questions"
-        >
-          <MenuItem value="">
-            <em>10</em>
-          </MenuItem>
-          <MenuItem value={20}>20</MenuItem>
-          <MenuItem value={30}>30</MenuItem>
-          <MenuItem value={30}>60</MenuItem>
-          <MenuItem value={30}>80</MenuItem>
+// <Autocomplete
+//       disablePortal
+//       id="combo-box-demo"
+//       options={ uniFields}
+//       sx={{ width: 300 ,marginTop:3}}
+//       renderInput={(params) => <TextField {...params} label="Course" />}
+//     />
+//     <Autocomplete
+//       disablePortal
+//       id="combo-box-demo"
+//       options={ Unichapter}
+//       sx={{ width: 300 ,marginTop:3}}
+//       renderInput={(params) => <TextField {...params} label="Chapter" />}
+//     />
+//         <Autocomplete
+//       disablePortal
+//       id="combo-box-demo"
+//       options={GeneralUniField}
+//       sx={{ width: 300 ,marginTop:3}}
+//       renderInput={(params) => <TextField {...params} label="Topic" />}
+//     />
+//      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+//         <InputLabel id="demo-simple-select-standard-label">No. of Questions</InputLabel>
+//         <Select
+//           labelId="demo-simple-select-standard-label"
+//           id="demo-simple-select-standard"
+//           value={NumberOfQuestions}
+//           onChange={handleChangeNumber}
+//           label="No. of Questions"
+//         >
+//           <MenuItem value="">
+//             <em>10</em>
+//           </MenuItem>
+//           <MenuItem value={20}>20</MenuItem>
+//           <MenuItem value={30}>30</MenuItem>
+//           <MenuItem value={30}>60</MenuItem>
+//           <MenuItem value={30}>80</MenuItem>
         
         
-        </Select>
-      </FormControl>
+//         </Select>
+//       </FormControl>
 
 
-            </div>
-            )
-          }
+//             </div>
+//             )
+//           }
 
        }
       
     return(
+<div style={{ display:'flex',alignItems:'center',flexDirection:"column"}} >
 
-        <div style={{marginLeft:400}}>
+        <div style={{display:'flex',flexDirection:"row",marginBottom:80}}>
          
-             <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">Type</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={level}
-          onChange={handleChange}
-          label="Type"
-        >
-          <MenuItem value="">
-          
-          </MenuItem>
-          <MenuItem value={"Grade 12 Exit Exam"}>Grade 12 Exit Exam</MenuItem>
-          <MenuItem value={"Remedian"}>Remedian</MenuItem>
-          <MenuItem value={"University Exit Exam"}>University Exit Exam</MenuItem>
-        
-       
-        </Select>
-      </FormControl>
-  <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">Mode</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={ExamType}
-          onChange={handleChangeExamType}
-          label="Mode"
-        >
-          <MenuItem value="">
-          
-          </MenuItem>
-          <MenuItem value={"Exam Mode"}>Exam Mode</MenuItem>
-          <MenuItem value={"Quiz Mode"}>Quiz Mode</MenuItem>
-          <MenuItem value={"Practice Mode"}>Practice Mode</MenuItem>
-        
-        </Select>
-        
-      </FormControl>
+<Button onClick={()=> setExamType('Exam Mode')} 
+style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}} > Exam Mode</Button>
+<Button onClick={()=> setExamType('Quiz Mode')}  style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}}> Quiz Mode</Button>
+<Button onClick={()=> setExamType('Practice Mode')} style={{backgroundColor:"#ff5f1f",color:'white',width:200}}> Practice Mode</Button>
+
+</div>
+<div >
 
 {
   ExamType == "Exam Mode" ? examMode() :ExamType == "Quiz Mode" ? quizMode():
   ExamType == "Practice Mode" ? practiceMode(): ''
 }
-  
+</div>
   
         </div>
     )

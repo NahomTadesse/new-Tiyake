@@ -5,11 +5,13 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 
 
 export default function SelectSmall() {
-  const [examType, setExamType] = React.useState('');
+  const [examType, setExamType] = React.useState('Exam Type');
   const [grade, setGrade] = React.useState('');
   const [year, setYear] = React.useState('');
   const [educationLevel, setEductionLevel] = React.useState('');
@@ -103,7 +105,7 @@ const seconGrade=()=>{
   return (
     <div style={{display:'flex',alignItems:"center",flexDirection:'column',minHeight:300}}>
      <div>
-    <FormControl sx={{ m: 1, minWidth: 120 }} size='medium'>
+    {/* <FormControl sx={{ m: 1, minWidth: 120 }} size='medium'>
       <InputLabel id="demo-select-medium">Exam Type</InputLabel>
       <Select
         labelId="demo-select-small"
@@ -117,14 +119,15 @@ const seconGrade=()=>{
         <MenuItem value={20}>Practice Mode</MenuItem>
         
       </Select>
-    </FormControl>
-    <FormControl sx={{ m: 1, minWidth: 120 }} size='medium'>
-      <InputLabel id="demo-select-medium">Exit Exam</InputLabel>
+    </FormControl> */}
+<FormControl sx={{ m: 1, minWidth: 120,display:'flex',justifyContent:'center',marginBottom:10 }} size='medium'>
+      <InputLabel id="demo-select-medium">Exit Type</InputLabel>
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
         value={educationLevel}
-        label="Exam Type"
+        label="Exit Exam"
+
         onChange={handllevelChange}
       >
         <MenuItem value={'secondary'}>Grade 12 Exit Exam</MenuItem>
@@ -132,8 +135,28 @@ const seconGrade=()=>{
         
       </Select>
     </FormControl>
+    <div style={{display:'flex',flexDirection:"row",marginBottom:80}}>
+         
+         <Button onClick={()=> setExamType('Exam Mode')} 
+         style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}} > Exam Mode</Button>
+         <Button onClick={()=> setExamType('Quiz Mode')}  style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}}> Quiz Mode</Button>
+         <Button onClick={()=> setExamType('Practice Mode')} style={{backgroundColor:"#ff5f1f",color:'white',width:200}}> Practice Mode</Button>
+         
+         </div>
+
+
+
+
+    
     </div>
     {educationLevel == 'secondary' ? seconGrade() : educationLevel == 'university' ? uniYear() : '' }
+    <TextField
+          disabled
+          id="outlined-disabled"
+          label={examType}
+          placeholder={examType}
+          sx={{ width: 300,marginTop:3,marginLeft:-4 }}
+        />
     </div>
   );
 }
