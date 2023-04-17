@@ -32,7 +32,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                        Excellent Study materials
                       </h6>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -41,8 +41,8 @@ const Testimonials = () => {
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Jhon Doe</h6>
-                        <p>California, United State</p>
+                        <h6 className="fw-bold">Henock</h6>
+                        <p>Addis Ababa, Ethiopia</p>
                       </div>
                     </div>
                   </div>
@@ -50,7 +50,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                        Excellent Study materials
                       </h6>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -59,8 +59,8 @@ const Testimonials = () => {
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Jhon Doe</h6>
-                        <p>California, United State</p>
+                        <h6 className="fw-bold">Henock</h6>
+                        <p>Addis Ababa, Ethiopia</p>
                       </div>
                     </div>
                   </div>
@@ -68,7 +68,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                        Excellent Study materials
                       </h6>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -77,8 +77,8 @@ const Testimonials = () => {
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Jhon Doe</h6>
-                        <p>California, United State</p>
+                        <h6 className="fw-bold">Henock</h6>
+                        <p>Addis Ababa, Ethiopia</p>
                       </div>
                     </div>
                   </div>

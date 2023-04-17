@@ -30,8 +30,8 @@ function CompanyApp() {
           ]}
           price={12}
           duration="y"
-          background="linear-gradient(to left, #ff0844 0%, #ffb199 100%);"
-          shadow="#ffb199"
+          background="linear-gradient(to left, #ff0844 0%, #FF5F1F 100%);"
+          shadow="#FF5F1F"
           currency="$"
           buttonContent="Get Started"
           subTitle="For High School students"
@@ -48,8 +48,8 @@ function CompanyApp() {
           ]}
           price={12}
           duration="y"
-          background="linear-gradient(to left, #ff0844 0%, #ffb199 100%);"
-          shadow="#ffb199"
+          background="linear-gradient(to left, #ff0844 0%, #FF5F1F 100%);"
+          shadow="#FF5F1F"
           currency="$"
           buttonContent="Get Started"
           subTitle="For University Students"

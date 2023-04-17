@@ -3,6 +3,11 @@ import { useStepperContext } from "../../contexts/StepperContext";
 // import RadioButtonGroup from 'RadioButtonGroup';
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../../assets/images/hero-img1.png";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 export default function Details() {
   const { userData, setUserData } = useStepperContext();
 
@@ -75,22 +80,24 @@ export default function Details() {
     
         </select>
       </div>
-      <div className="w-full mx-2 flex-1"> 
-      <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          Type of Study
-        </div>
-      <label>
-        <input type="radio" value="option1" checked={Details.selectedOption === 'option1'} onChange={Details.handleChange} />
-        Regular
-      </label>
-      <br />
-      <label>
-        <input type="radio" value="option2" checked={Details.selectedOption === 'option2'} onChange={Details.handleChange} />
-        None regular
-      </label>
+  
+<div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
+
+       <FormControl>
+      <FormLabel id="demo-radio-buttons-group-label">Type of Study</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-radio-buttons-group-label"
+        defaultValue="female"
+        name="radio-buttons-group"
+      >
+        <Col>
+        <FormControlLabel value=" Regular" control={<Radio />} label=" Regular" />
+        <FormControlLabel value="None regular " control={<Radio />} label="None regular " />
+        </Col>
+      </RadioGroup>
+    </FormControl>
       
-    
-</div>
+    </div>
         </Col>
         <Col lg="6" md="6">
           
@@ -129,22 +136,25 @@ export default function Details() {
       </select>
     </div>
 
-    <div className="w-full mx-2 flex-1"> 
-      <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          Usage For
-        </div>
-      <label>
-        <input type="radio" value="option1" checked={Details.selectedOption === 'option1'} onChange={Details.handleChange} />
-        Grade 12 university entrance exam
-      </label>
-      <br />
-      <label>
-        <input type="radio" value="option2" checked={Details.selectedOption === 'option2'} onChange={Details.handleChange} />
-        University exit exam 
-      </label>
+ 
+
+<div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
+
+       <FormControl>
+      <FormLabel id="demo-radio-buttons-group-label">Usage For</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-radio-buttons-group-label"
+        defaultValue="female"
+        name="radio-buttons-group"
+      >
+        <Col>
+        <FormControlLabel value=" Grade 12 university entrance exam" control={<Radio />} label=" Grade 12 university entrance exam" />
+        <FormControlLabel value="University exit exam " control={<Radio />} label="University exit exam " />
+        </Col>
+      </RadioGroup>
+    </FormControl>
       
-    
-</div>
+    </div>
 
       
       

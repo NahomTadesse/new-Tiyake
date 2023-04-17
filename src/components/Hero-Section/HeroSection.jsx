@@ -22,7 +22,7 @@ const HeroSection = () => {
                <p className="enroll ">
                {/* <Link to="about" smooth={true} offset={-200} duration={500}>Projects</Link> */}
 
-            <a href="#aboutus"> Learm More</a>
+            <a href="/learnmore"> Learm More</a>
           </p>
               </p>
             </div>

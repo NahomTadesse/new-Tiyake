@@ -1,5 +1,10 @@
 import { useStepperContext } from "../../contexts/StepperContext";
 import { Container, Row, Col } from "reactstrap";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 export default function Account() {
   const { userData, setUserData } = useStepperContext();
 
@@ -128,19 +133,26 @@ export default function Account() {
 
       <div className="w-full mx-2 flex-1"> 
       <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          Gender
+        
         </div>
-      <label>
-        <input type="radio" value="option1" checked={Account.selectedOption === 'option1'} onChange={Account.handleChange} />
-        Male
-      </label>
-      <br />
-      <label>
-        <input type="radio" value="option2" checked={Account.selectedOption === 'option2'} onChange={Account.handleChange} />
-        Female
-      </label>
+        <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
+
+       <FormControl>
+      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-radio-buttons-group-label"
+        defaultValue="female"
+        name="radio-buttons-group"
+      >
+        <Col>
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        </Col>
+      </RadioGroup>
+    </FormControl>
       
-    
+    </div>
+
 </div>
       
       

@@ -2,6 +2,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "./team.css";
+import img1 from '../../assets/images/profile.png'
 
 function Team () {
     let message = `There are many variations of passages of Lorem Ipsum available but the \n majority have suffered alteration in some injected humour.`;
@@ -26,9 +27,9 @@ function Team () {
 
 <div className="team-item">
 
-    <img src="https://demo.epic-webdesign.com/tf-pacifico/v1/images/team2a.jpg" className="team-img" alt="pic" />
+    <img src={img1} className="team-img" alt="pic" />
    
-    <h3>ALEXANDRA SMITHS</h3>
+    <h3>Menassie Ermias</h3>
     
     <div className="team-info"><p>SEO Specialist</p></div>
 
@@ -56,9 +57,9 @@ function Team () {
 
                   <div className="team-item">
                   
-                      <img src="https://demo.epic-webdesign.com/tf-pacifico/v1/images/team2a.jpg" className="team-img" alt="pic" />
+                      <img src={img1}  className="team-img" alt="pic" />
                      
-                      <h3>ALEXANDRA SMITHS</h3>
+                      <h3>Nahom Tadesse</h3>
                       
                       <div className="team-info"><p>SEO Specialist</p></div>
 
@@ -85,9 +86,9 @@ function Team () {
 
                   <div className="team-item">
                   
-                      <img src="https://demo.epic-webdesign.com/tf-pacifico/v1/images/team3a.jpg" className="team-img" alt="pic" />
+                      <img src={img1}  className="team-img" alt="pic" />
                      
-                      <h3>ELISA JOHANSON</h3>
+                      <h3>Henock Kinfe</h3>
                       
                       <div className="team-info"><p>Marketing Manager</p></div>
 
