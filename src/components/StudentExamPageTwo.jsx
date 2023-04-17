@@ -27,6 +27,7 @@ import Input from '@mui/material/Input';
 import InputAdornment from '@mui/material/InputAdornment';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -137,26 +138,28 @@ return(
     
 
     </FormControl>
+    <div style={{marginTop:40,marginLeft:200}}>
     { index!=0 &&
     
-    <Button variant="contained" href="#contained-buttons"  style={{marginTop :20,marginBottom:20,marginLeft:10,width:50,
-          alignSelf:'flex-end',marginLeft:10,marginTop:200,backgroundColor:"#ff5f1f"}}
+    <Button style={{backgroundColor:'#ff5f1f',color:"white",marginRight:10}}
           onClick={()=>{setX(x-1)}}
           >
   Prev
    </Button>}
-        <Button variant="contained" href="#contained-buttons"  style={{marginTop :20,marginBottom:20,marginLeft:10,width:50,
-          alignSelf:'flex-end',marginLeft:10,marginTop:200,backgroundColor:"#ff5f1f"}}
+ 
+        <Button style={{backgroundColor:'#ff5f1f',color:'white'}}
           onClick={()=>{ index == questions.length-1 ? handleClickOpen() : setX(x+1)  }}
           >
    { index == questions.length-1 ? 
    
    'Finish' :'Next'}
    </Button>
-{  showExplanation && <div>
+   </div>
+
+{  showExplanation && <div style={{marginTop:20}}>
       {ques.Explanation}
       </div>}
-
+     
    <Dialog
         open={open}
         TransitionComponent={Transition}
@@ -168,7 +171,14 @@ return(
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
           <div>
+              <ProgressBar now={80.5} />
             <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1>Question Nmber : 1,3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1> Question Nmber : 2
           </div>
           <div>
             <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
@@ -202,7 +212,7 @@ return(
 
 
 
-<div style={{height:500,width:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,
+<div style={{width:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,
 marginLeft:50}}>
   
 
@@ -219,7 +229,7 @@ return(
          <Button style={{fontSize:14}} onClick={()=>{ setShowFirst(!showFirst)
     
       
-  }}>{ showFirst ? "Hide Hint":"Show Hint"}</Button>
+  }}>{ showFirst ? "Hide Hint":"Show Hint ?"}</Button>
   
 
   { showFirst &&  
@@ -243,16 +253,16 @@ return(
   }
   <div>
     <div style={{backgroundColor:"#ff5f1f"}}>
-<section style={{textAlign:'center',color:'white'}}> Comment Section</section>
+<div style={{textAlign:'center',color:'white'}}> Comment Section</div>
 </div>
 {profiles.map((pro,index)=>{
   return(
-    <div style={{}}> 
-<div style={{display:'flex', flexDirection:'row',margin:3}}> 
+    <div > 
+<div style={{display:'flex', flexDirection:'row'}}> 
 <img src={img1} alt="" height="20" width="20"/>
-<section style={{fontWeight:'bold',left:10}}>
+<div style={{fontWeight:'bold',left:10}}>
 {pro.Name}
-</section>
+</div>
 </div>
 <div style={{marginLeft:25, marginBottom:10}}>
 {pro.Comment}
@@ -263,7 +273,7 @@ return(
 
 }
 
-      <FormControl variant="standard" style={{position:'relative',marginLeft:10,top:10}}>
+      <FormControl variant="standard" style={{position:'relative',marginLeft:10,marginTop:10,marginBottom:5}}>
         <InputLabel htmlFor="input-with-icon-adornment">
         Add Comment
         </InputLabel>
@@ -402,7 +412,14 @@ const examMode=()=>{
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
             <div>
+            <ProgressBar now={80.5} />
             <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1> Question Nmber : 1,3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1> Question Nmber : 1
           </div>
           <div>
             <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
@@ -490,7 +507,7 @@ const examMode=()=>{
   </div> */}
   <div style={{height:40,width:250,borderWidth:1,display:'flex',flexDirection:'row',marginTop:150,marginLeft:20}}>
     <img src={img2} alt="" height={30} width='20' style={{padding:1}} />
-    <section style={{marginTop:5}}>{`26 Minutes | 16 Seconds Left`}</section>
+    <div style={{marginTop:10}}>{`26 Minutes | 16 Seconds Left`}</div>
 
   </div>
   <></>
@@ -616,7 +633,14 @@ const quizMode=()=>{
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
             <div>
+            <ProgressBar now={80.5} />
             <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1> Question Nmber : 1,3
+          </div>
+          <div>
+            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1>Question Nmber :  1
           </div>
           <div>
             <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
@@ -704,7 +728,7 @@ const quizMode=()=>{
   </div> */}
   <div style={{height:40,width:250,borderWidth:1,display:'flex',flexDirection:'row',marginTop:150,marginLeft:20}}>
     <img src={img2} alt="" height={30} width='20' style={{padding:1}} />
-    <section style={{marginTop:5}}>{`26 Minutes | 16 Seconds Left`}</section>
+    <div style={{marginTop:10}}>{`26 Minutes | 16 Seconds Left`}</div>
 
   </div>
   <></>

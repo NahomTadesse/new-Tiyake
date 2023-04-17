@@ -132,17 +132,16 @@ return(
     
 
     </FormControl>
+    <div style={{marginTop:40,marginLeft:200}}>
     { index!=0 &&
     
-    <Button variant="contained" href="#contained-buttons"  style={{marginTop :20,marginBottom:20,marginLeft:10,width:50,
-          alignSelf:'flex-end',marginLeft:10,marginTop:200,backgroundColor:"#ff5f1f"}}
+    <Button style={{backgroundColor:'#ff5f1f',color:"white",marginRight:10}}
           onClick={()=>{setX(x-1)}}
           >
   Prev
    </Button>}
    {index !== questions.length-1 &&
-        <Button variant="contained" href="#contained-buttons"  style={{marginTop :20,marginBottom:20,marginLeft:10,width:50,
-          alignSelf:'flex-end',marginLeft:10,marginTop:200,backgroundColor:"#ff5f1f"}}
+        <Button style={{backgroundColor:'#ff5f1f',color:'white'}}
           onClick={()=>{ index == questions.length-1 ? handleClickOpen() : setX(x+1)  }}
           >
    { index == questions.length-1 ? 
@@ -150,8 +149,8 @@ return(
    'Finish' :'Next'}
    </Button>
    
-  
    }
+   </div>
 
    <Dialog
         open={open}
@@ -172,7 +171,7 @@ return(
         </DialogActions>
       </Dialog>
       {  index+1 == x &&
-    <div style={{fontSize:18}}>
+    <div style={{fontSize:18,marginTop:20}}>
       {ques.Explanation}
 
 
@@ -216,16 +215,16 @@ return(
   }
   <div>
     <div style={{backgroundColor:'#ff5f1f',marginBottom:10}}>
-<section style={{textAlign:'center',color:'white'}}> Comment Section</section>
+<div style={{textAlign:'center',color:'white'}}> Comment Section</div>
 </div>
 {profiles.map((pro,index)=>{
   return(
     <div style={{}}> 
 <div style={{display:'flex', flexDirection:'row',margin:3}}> 
 <img src={img1} alt="" height="20" width="20"/>
-<section style={{fontWeight:'bold',left:10}}>
+<div style={{fontWeight:'bold',left:10}}>
 {pro.Name}
-</section>
+</div>
 </div>
 <div style={{marginLeft:25, marginBottom:10}}>
 {pro.Comment}

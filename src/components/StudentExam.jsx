@@ -1,5 +1,4 @@
 
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
@@ -32,7 +31,7 @@ const steps = [
 
 // const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
 
-export default function addExam(){
+export default function AddExam(){
     const [activeStep, setActiveStep] = React.useState(0);
     // const [steps, setSteps] = React.useState(steps[0]);
     const [completed, setCompleted] = React.useState({});
@@ -95,10 +94,10 @@ export default function addExam(){
   
     return (
      <div>
-      <div style={{position:'relative',top:0}}>
+      <div style={{}}>
        {/* <Navbar/> */}
        </div>
-      <Box sx={{ width: '80%', m: "3rem auto 0" ,marginTop:20 }}>
+      <Box sx={{ width: '80%', m: "3rem auto 0" ,marginTop:5,height:window.innerHeight,marginBottom:10}}>
     
         <Stepper nonLinear activeStep={activeStep}>
           {steps.map((label, index) => (
@@ -150,7 +149,7 @@ export default function addExam(){
                 <Button onClick={handleNext} sx={{ mr: 1 }} style={{backgroundColor:"#ff5f1f",color:'white'}} >
                   Next
                 </Button>
-                {activeStep !== steps.length &&
+                {/* {activeStep !== steps.length-1 &&
                   (completed[activeStep] ? (
                     <Typography variant="caption" sx={{ display: 'inline-block' }}>
                       Step {activeStep + 1} already completed
@@ -161,7 +160,7 @@ export default function addExam(){
                         ? 'Finish'
                         : 'Complete Step'}
                     </Button>
-                  ))}
+                  ))} */}
               </Box>
             </React.Fragment>
           )}
