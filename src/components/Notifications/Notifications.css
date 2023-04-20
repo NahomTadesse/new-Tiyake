@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+.Container{
+    width: 50%;
+    margin: 40px auto;
+    background-color: lightgray ;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+}
+.Tile{
+    height: 40px;
+    width: 100%;
+    margin-bottom: 5px ;
+    background-color: rgba(23, 127, 179, 0.267) ;
+    position: relative;
+}
+.Tile-Img {
+    height: 30px;
+    width : 30px;
+    margin: auto 10px;
+    display: inline;
+    border-radius: 40%;
+}
+
+.Tile-info{
+    margin-left: 10px;
+    display: inline;
+    color: black;
+}
+
+.Time-stamp{
+    font-size: 0.4em;
+    position:absolute;
+    display: inline;
+    bottom: 0;
+    right: 2px;
+}
