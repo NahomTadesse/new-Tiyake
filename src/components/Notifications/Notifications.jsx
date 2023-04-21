@@ -1,7 +1,11 @@
-import React from 'react';
+import { React, useState } from 'react';
 import './Notifications.css'
 
 export default function Notifications(){
+
+    const [showQuestion, setShowQuestion] = useState(false);
+    const [showComment, setShowComment] = useState(false);
+    const [showUpdateProfile, setShowUpdateProfile] = useState(false);
 
     return (
         <div className='Container'> 

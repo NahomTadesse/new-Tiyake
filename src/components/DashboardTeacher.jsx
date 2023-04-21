@@ -10,16 +10,18 @@ import rankingImg from "../assets/images/ranking.png";
 import statImg from "../assets/images/stat.png";
 import examImg from "../assets/images/exam.png";
 import Notifications from './Notifications/Notifications.jsx'
+import NotificationsB from "./Notifications-2/Notifications-b";
 
 export default function DashBoard() {
 	const [showExam, setShowExam] = useState(false);
 	const [showProfile, setShowProfile] = useState(true);
 	const [showLeaderboard, setShowLeaderboard] = useState(false);
 	const [stat, setStat] = useState(false);
-    const [showNotif, setShowNotif] = useState(false)
+    const [showNotif, setShowNotif] = useState(false);
+	const [showNotifB, setShowNotifB] = useState(false);
 
 	return (
-		<div style={{ display: "flex", flexDirection: "row" }}>
+		<div style={{ display: "flex", flexDirection: "row", height: "window.innerHeight" }}>
 			<div
 				style={{
 					display: "flex",
@@ -44,6 +46,7 @@ export default function DashBoard() {
 							setShowExam(false);
 							setShowLeaderboard(false);
                             setShowNotif(false);
+							setShowNotifB(false);
 						}}
 						style={{
 							marginTop: 5,
@@ -76,6 +79,7 @@ export default function DashBoard() {
 								setShowLeaderboard(false);
 								setStat(false);
                                 setShowNotif(false);
+								setShowNotifB(false);
 							}}
 							style={{ color: "white" }}
 						>
@@ -101,6 +105,7 @@ export default function DashBoard() {
 								setShowLeaderboard(true);
 								setStat(false);
                                 setShowNotif(false);
+								setShowNotifB(false);
 							}}
 						>
 							Leader Board
@@ -124,6 +129,7 @@ export default function DashBoard() {
 								setShowLeaderboard(false);
 								setStat(true);
                                 setShowNotif(false);
+								setShowNotifB(false);
 							}}
 						>
 							Statistics
@@ -145,9 +151,32 @@ export default function DashBoard() {
 								setShowLeaderboard(false);
 								setStat(false);
                                 setShowNotif(true);
+								setShowNotifB(false);
 							}}
 						>
 							Notifications
+							<img
+								src={statImg}
+								alt=""
+								height={30}
+								width={30}
+								style={{ marginLeft: 5, marginBottom: 15 }}
+							/>
+						</Button>
+					</div>
+					<div>
+                        <Button
+							style={{ color: "white" }}
+							onClick={() => {
+								setShowExam(false);
+								setShowProfile(false);
+								setShowLeaderboard(false);
+								setStat(false);
+                                setShowNotif(false);
+								setShowNotifB(true);
+							}}
+						>
+							Notifications B
 							<img
 								src={statImg}
 								alt=""
@@ -170,7 +199,9 @@ export default function DashBoard() {
 					<Stat />
 				) : showNotif ? (
                     <Notifications />
-                ) : (
+                ) : showNotifB ? (
+					<NotificationsB />
+				) : (
 					""
 				)}
 			</div>

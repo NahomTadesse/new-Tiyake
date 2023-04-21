@@ -104,7 +104,7 @@ const questions =[
       <div style={{display:'flex',flexDirection:'row' ,marginLeft:60}}>
        
 
-<div style={{width:500,height:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,boxShadow:20,
+<div style={{width:400,height:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,boxShadow:20,
 }}>
 
 {questions.map((ques,index)=>{

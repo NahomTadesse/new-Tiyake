@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+.notif-types{
+    background-color: #050447;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+.notif-button {
+    margin-left: 15%;
+    background-color: aqua;
+    
+}
+
+.container{
+    width: 100%;
+}
