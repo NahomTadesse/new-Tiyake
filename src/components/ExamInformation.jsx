@@ -7,6 +7,8 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { isEditable } from '@testing-library/user-event/dist/utils';
+
 
 
 
@@ -15,6 +17,10 @@ export default function SelectSmall() {
   const [grade, setGrade] = React.useState('');
   const [year, setYear] = React.useState('');
   const [educationLevel, setEductionLevel] = React.useState('');
+
+  const [isSelectedExam,setSelectedExam] =  React.useState(false);
+  const [isSelectedQuiz,setSelectedQuiz] =  React.useState(false);
+  const [isSelectedPractice,setSelectedPractice] =  React.useState(false);
 
   const handleChange = (event) => {
     setExamType(event.target.value);
@@ -135,12 +141,48 @@ const seconGrade=()=>{
         
       </Select>
     </FormControl>
-    <div style={{display:'flex',flexDirection:"row",marginBottom:80}}>
+    <div style={
+      {display:'flex',flexDirection:"row",marginBottom:80}}
+    
+    >
          
-         <Button onClick={()=> setExamType('Exam Mode')} 
-         style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}} > Exam Mode</Button>
-         <Button onClick={()=> setExamType('Quiz Mode')}  style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}}> Quiz Mode</Button>
-         <Button onClick={()=> setExamType('Practice Mode')} style={{backgroundColor:"#ff5f1f",color:'white',width:200}}> Practice Mode</Button>
+         <Button onClick={()=> 
+         {
+         setExamType('Exam Mode');
+        setSelectedExam(!isSelectedExam);
+        setSelectedQuiz(false)
+        setSelectedPractice(false)
+        }
+         } 
+         style={
+          isSelectedExam ?
+          {marginRight:20,backgroundColor:"#040720",color:'white',width:200}
+        :
+        {marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}
+        } 
+         
+         > Exam Mode</Button>
+
+         <Button onClick={()=> {setExamType('Quiz Mode');setSelectedQuiz(!isSelectedQuiz); setSelectedExam(false);
+           setSelectedPractice(false) 
+        }}  style={
+          isSelectedQuiz ?
+          {marginRight:20,backgroundColor:"#040720",color:'white',width:200} :
+          {marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}
+          
+          }> 
+         
+         Quiz Mode</Button>
+
+         <Button onClick={()=>{ setExamType('Practice Mode'); setSelectedPractice(!isSelectedPractice);
+         setSelectedExam(false);setSelectedQuiz(false)
+        
+        }} style={
+          isSelectedPractice ?
+          {backgroundColor:"#040720",color:'white',width:200}:
+          {backgroundColor:"#ff5f1f",color:'white',width:200}
+          
+          }> Practice Mode</Button>
          
          </div>
 
@@ -150,13 +192,7 @@ const seconGrade=()=>{
     
     </div>
     {educationLevel == 'secondary' ? seconGrade() : educationLevel == 'university' ? uniYear() : '' }
-    <TextField
-          disabled
-          id="outlined-disabled"
-          label={examType}
-          placeholder={examType}
-          sx={{ width: 300,marginTop:3,marginLeft:-4 }}
-        />
+   
     </div>
   );
 }

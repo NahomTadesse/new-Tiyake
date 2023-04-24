@@ -21,14 +21,26 @@ export default function DashBoard() {
 	const [showNotifB, setShowNotifB] = useState(false);
 
 	return (
-		<div style={{ display: "flex", flexDirection: "row", height: "window.innerHeight" }}>
+		<div style={{ display: "flex", flexDirection: "row", height: "window.innerHeight " }}>
 			<div
 				style={{
 					display: "flex",
 					flexDirection: "column",
-					backgroundColor: "#ff5f1f",
-					width: "35%",
-					height: window.innerHeight,
+					// backgroundColor: "#ff5f1f",
+					width: "25%",
+					height:500,
+					// box-shadow: 3px 3px 9px black;
+					boxShadow:'3px 3px 9px black',
+					borderWidth:1,
+					borderColor:'white',
+					borderRadius:'0 20 20 0',
+					borderTopRightRadius:20,
+					borderBottomRightRadius:20,
+					marginBottom:100,
+					marginTop:20
+					
+
+
 				}}
 			>
 				<div
@@ -50,11 +62,11 @@ export default function DashBoard() {
 						}}
 						style={{
 							marginTop: 5,
-							backgroundColor: "#040720",
-							borderWidth: 1,
-							borderColor: "#040720",
-							borderRadius: 10,
-							color: "white",
+							// backgroundColor: "#040720",
+							// borderWidth: 1,
+							// borderColor: "#040720",
+							// borderRadius: 10,
+							color: "#ff5f1f",
 						}}
 					>
 						View Profile
@@ -81,24 +93,25 @@ export default function DashBoard() {
                                 setShowNotif(false);
 								setShowNotifB(false);
 							}}
-							style={{ color: "white" }}
+							style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:200,marginTop:20}}
 						>
 							{" "}
 							Add Exam
-							<img
+							{/* <img
 								src={examImg}
 								alt=""
 								height={30}
 								width={30}
 								style={{ marginLeft: 5, marginBottom: 10 }}
-							/>
+							/> */}
 						</Button>
 					</div>
 					<div
 						style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}
 					>
 						<Button
-							style={{ color: "white" }}
+							style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:'120%',
+							 }}
 							onClick={() => {
 								setShowExam(false);
 								setShowProfile(false);
@@ -109,20 +122,20 @@ export default function DashBoard() {
 							}}
 						>
 							Leader Board
-							<img
+							{/* <img
 								src={rankingImg}
 								alt=""
 								height={30}
 								width={30}
 								style={{ marginLeft: 5, marginBottom: 10 }}
-							/>
+							/> */}
 						</Button>
 					</div>
 					<div
 						style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}
 					>
 						<Button
-							style={{ color: "white" }}
+							style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:'120%', }}
 							onClick={() => {
 								setShowExam(false);
 								setShowProfile(false);
@@ -133,18 +146,18 @@ export default function DashBoard() {
 							}}
 						>
 							Statistics
-							<img
+							{/* <img
 								src={statImg}
 								alt=""
 								height={30}
 								width={30}
 								style={{ marginLeft: 5, marginBottom: 15 }}
-							/>
+							/> */}
 						</Button>
                     </div>
                     <div>
                         <Button
-							style={{ color: "white" }}
+							style={{ color: "#ff5f1f" ,boxShadow:'3px 3px 9px black' ,width:'100%',marginBottom:20}}
 							onClick={() => {
 								setShowExam(false);
 								setShowProfile(false);
@@ -155,18 +168,18 @@ export default function DashBoard() {
 							}}
 						>
 							Notifications
-							<img
+							{/* <img
 								src={statImg}
 								alt=""
 								height={30}
 								width={30}
 								style={{ marginLeft: 5, marginBottom: 15 }}
-							/>
+							/> */}
 						</Button>
 					</div>
 					<div>
                         <Button
-							style={{ color: "white" }}
+							style={{ color: "#ff5f1f" ,boxShadow:'3px 3px 9px black' ,width:'100%',}}
 							onClick={() => {
 								setShowExam(false);
 								setShowProfile(false);
@@ -177,13 +190,13 @@ export default function DashBoard() {
 							}}
 						>
 							Notifications B
-							<img
+							{/* <img
 								src={statImg}
 								alt=""
 								height={30}
 								width={30}
 								style={{ marginLeft: 5, marginBottom: 15 }}
-							/>
+							/> */}
 						</Button>
 					</div>
 				</div>
