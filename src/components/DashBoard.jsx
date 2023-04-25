@@ -18,7 +18,26 @@ export default function DashBoard(){
 
     return(
         <div style={{display:'flex',flexDirection:"row"}}>
-            <div style={{display:'flex',flexDirection:"column",backgroundColor:'#ff5f1f',width:'25%',height: window.innerHeight }}>
+
+            <div
+             style={{
+          
+					display: "flex",
+					flexDirection: "column",
+					// backgroundColor: "#ff5f1f",
+					width: "25%",
+					height:500,
+					// box-shadow: 3px 3px 9px black;
+					boxShadow:'3px 3px 9px black',
+					borderWidth:1,
+					borderColor:'white',
+					borderRadius:'0 20 20 0',
+					borderTopRightRadius:20,
+					borderBottomRightRadius:20,
+					marginBottom:100,
+					marginTop:20
+					
+                 }}>
                 <div style={{display:'flex',alignSelf:'center',marginTop:20,flexDirection:'column'}}>
                     <img src={img1} alt="" width={100} height={100} style={{}}/>
                     <button onClick={()=>{setShowProfile(true); 
@@ -26,11 +45,13 @@ export default function DashBoard(){
                                         setShowLeaderboard(false); 
                                         setShowTeacherProfile(false)}} 
                         style={{marginTop:5,
-                                backgroundColor:"#040720",
-                                borderWidth:1,
-                                borderColor:'#040720',
-                                borderRadius:10,
-                                color:'white'}}>
+                            marginTop: 5,
+							// backgroundColor: "#040720",
+							// borderWidth: 1,
+							// borderColor: "#040720",
+							// borderRadius: 10,
+							color: "#ff5f1f",
+                                }}>
                                     View Profile
                     </button>
                 </div>
@@ -39,49 +60,47 @@ export default function DashBoard(){
                             marginTop:20,
                             flexDirection:'column',
                             marginLeft:10}}>
-                    <div style={{display:"flex",
-                                flexDirection:'row',
-                                marginBottom:20}}>
+                    <div style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}>
                         <Button onClick={()=>{setShowExam(true); 
                                             setShowProfile(false); 
                                             setShowLeaderboard(false); 
                                             setShowTeacherProfile(false);
                                             setShowFilter(false)}} 
-                                            style={{color:'white'}}>
+                                            style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:200,marginTop:20,
+                                            marginLeft:20}}>
                                             Take Exam
-                            <img src={examImg} alt="" height={30} width={30} style={{marginLeft:5}}/> 
+                            {/* <img src={examImg} alt="" height={30} width={30} style={{marginLeft:5}}/>  */}
                         </Button>
                     </div>
-                    <div style={{display:"flex",
-                                flexDirection:'row',
-                                marginBottom:20}}>
-                        <Button style={{color:'white'}} 
+                    <div style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}>
+
+                        <Button 	style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:'120%', marginLeft:20
+							 }}
                                 onClick={()=>{setShowExam(false); 
                                             setShowProfile(false); 
                                             setShowLeaderboard(false); 
                                             setShowTeacherProfile(false);
                                             setShowFilter(true)}}>
                                                  Teachers
-                            <img src={teacherImg} 
+                            {/* <img src={teacherImg} 
                                 alt="" height={30} width={30}
-                                style={{marginLeft:5,marginBottom:10}}/> 
+                                style={{marginLeft:5,marginBottom:10}}/>  */}
                         </Button>
                     </div>
-                    <div style={{display:"flex",
-                                flexDirection:'row',
-                                marginBottom:20}}>
-                        <Button style={{color:'white'}} 
+                    <div style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}>
+                        <Button 	style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:'120%', marginLeft:20
+							 }}
                                 onClick={()=>{setShowExam(false); 
                                             setShowProfile(false); 
                                             setShowLeaderboard(true); 
                                             setShowTeacherProfile(false);
                                             setShowFilter(false)}}>
                                                  Leader Board
-                            <img src={rankingImg} 
+                            {/* <img src={rankingImg} 
                                 alt="" height={30} 
                                 width={30} 
                                 style={{marginLeft:5,
-                                        marginBottom:10}}/> 
+                                        marginBottom:10}}/>  */}
                         </Button>
                     </div>
                 {/* <Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(true)}}> Leader Board</Button> */}

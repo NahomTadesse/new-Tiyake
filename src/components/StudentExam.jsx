@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import StudenExamPageTwo from "./StudentExamPageTwo"
 import StudenExamPageOne from "./StudentExamPageOne"
 import StudentPreview from "./StudentPreview"
+import Instruction from './Instruction';
 // import Preview from './Preview'
 // import Navbar from './Navbar';
 import Footer from './Footer/Footer';
@@ -18,18 +19,12 @@ import Footer from './Footer/Footer';
 const steps = [
   StudenExamPageTwo,
   StudenExamPageTwo,
-  StudentPreview
-//   Preview ,
-//   "hello"
+  StudentPreview,
+  Instruction
+
 ]
 
-// const steps = [
-//   {completed:false, component: ExamInformation},
-//   {completed:false, component: ExamInformationTwo},
-//   {completed:false, component: <h1>"Last Step"</h1>},
-// ]
 
-// const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
 
 export default function AddExam(){
     const [activeStep, setActiveStep] = React.useState(0);
@@ -63,13 +58,6 @@ export default function AddExam(){
 
 
 
-      // const newActiveStep =
-      //   isLastStep() && !allStepsCompleted()
-      //     ? // It's the last step, but not all steps have been completed,
-      //       // find the first step that has been completed
-      //       steps.findIndex((step, i) => !(i in completed))
-      //     : activeStep + 1;
-      // setActiveStep(newActiveStep);
     };
   
     const handleBack = () => {
@@ -122,7 +110,7 @@ export default function AddExam(){
           ) : (
             <React.Fragment>
               <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-                {activeStep == 0 ? 'Mode Type': activeStep == 1 ? 'Exam' : activeStep == 2 ? "Preview" : '' }
+                {activeStep == 0 ? 'Mode Type': activeStep == 1 ? 'Instruction' : activeStep == 2 ? "Exam" : activeStep == 3 ?'Preview' :'' }
               </Typography>
 
               {
@@ -130,12 +118,13 @@ export default function AddExam(){
               }
 
               {
-                activeStep === 1 && <StudenExamPageTwo/>
+                activeStep === 1 && <Instruction/>
               }
 
-              {  activeStep === 2 && <StudentPreview/>
+              {  activeStep === 2 && <StudenExamPageTwo/>
 }
-
+{  activeStep === 3 && <StudentPreview/>
+}
               <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                 <Button
                   color="inherit"
@@ -149,18 +138,7 @@ export default function AddExam(){
                 <Button onClick={handleNext} sx={{ mr: 1 }} style={{backgroundColor:"#ff5f1f",color:'white'}} >
                   Next
                 </Button>
-                {/* {activeStep !== steps.length-1 &&
-                  (completed[activeStep] ? (
-                    <Typography variant="caption" sx={{ display: 'inline-block' }}>
-                      Step {activeStep + 1} already completed
-                    </Typography>
-                  ) : (
-                    <Button onClick={handleComplete}>
-                      {completedSteps() === totalSteps() - 1
-                        ? 'Finish'
-                        : 'Complete Step'}
-                    </Button>
-                  ))} */}
+              
               </Box>
             </React.Fragment>
           )}

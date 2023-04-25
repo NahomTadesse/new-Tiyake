@@ -110,7 +110,7 @@ const questions =[
       <div style={{display:'flex',flexDirection:'row' ,marginLeft:60}}>
        
 
-<div style={{width:500,height:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,boxShadow:20,
+<div style={{width:500,height:400,borderWidth:1,borderColor:'white',marginTop:20,borderRadius:10,boxShadow:'3px 3px 9px black'
 }}>
 
 {questions.map((ques,index)=>{
@@ -160,39 +160,47 @@ return(
       {ques.Explanation}
       </div>}
      
-   <Dialog
-        open={open}
-        TransitionComponent={Transition}
-        keepMounted
-        onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
-      >
-        <DialogTitle>{"Exam Result"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-          <div>
-              <ProgressBar now={80.5} />
-            <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+  
+      <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleClose}
+          aria-describedby="alert-dialog-slide-description"
+          style={{boxShadow:'3px 3px 9px black'}}
+          fullWidth={200}
+        >
+          <DialogTitle>{"Exam Result"}</DialogTitle>
+          <DialogContent style={{backgroundColor:"#040720",padding:40}}>
+            <DialogContentText id="alert-dialog-slide-description">
+            <div>
+            <ProgressBar now={80.5} style={{marginBottom:20,marginTop:20}}/>
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Score</h3> 
+            <div style={{color:'white',marginBottom:10}}>2/3 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1>Question Nmber : 1,3
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Correctly gotten qestions</h3>
+            <div style={{color:'white',marginBottom:10}}> Question Nmber : 1,3 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1> Question Nmber : 2
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Missed Qestions</h3> 
+            <div style={{color:'white',marginBottom:10}}>Question Nmber : 1 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Time Taken</h3> 
+            <div style={{color:'white',marginBottom:10}}>20 Minutes </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Average</h1> 80.5%
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Average</h3> 
+            <div style={{color:'white',marginBottom:10}}>80.5% </div>
           </div>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Ok</Button>
-          {/* <Button onClick={handleClose}>Agree</Button> */}
-        </DialogActions>
-      </Dialog>
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Ok</Button>
+            {/* <Button onClick={handleClose}>Agree</Button> */}
+          </DialogActions>
+        </Dialog>
 
 
    </div>
@@ -212,8 +220,8 @@ return(
 
 
 
-<div style={{width:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,
-marginLeft:50}}>
+<div style={{width:400,borderWidth:1,borderColor:'white',marginTop:20,borderRadius:10,
+marginLeft:50,boxShadow:'3px 3px 9px black'}}>
   
 
 {questions.map((ques,index)=>{
@@ -357,7 +365,7 @@ const examMode=()=>{
         <div style={{display:'flex',flexDirection:'row' ,marginLeft:170}}>
          
   
-  <div style={{width:500,height:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,boxShadow:20,
+  <div style={{width:500,height:400,borderWidth:1,borderColor:'white',borderRadius:10,boxShadow:'3px 3px 9px black',margintop:20
   }}>
   
   {questions.map((ques,index)=>{
@@ -407,25 +415,32 @@ const examMode=()=>{
           keepMounted
           onClose={handleClose}
           aria-describedby="alert-dialog-slide-description"
+          style={{boxShadow:'3px 3px 9px black'}}
+          fullWidth={200}
         >
           <DialogTitle>{"Exam Result"}</DialogTitle>
-          <DialogContent>
+          <DialogContent style={{backgroundColor:"#040720",padding:40}}>
             <DialogContentText id="alert-dialog-slide-description">
             <div>
-            <ProgressBar now={80.5} />
-            <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+            <ProgressBar now={80.5} style={{marginBottom:20,marginTop:20}}/>
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Score</h3> 
+            <div style={{color:'white',marginBottom:10}}>2/3 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1> Question Nmber : 1,3
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Correctly gotten qestions</h3>
+            <div style={{color:'white',marginBottom:10}}> Question Nmber : 1,3 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1> Question Nmber : 1
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Missed Qestions</h3> 
+            <div style={{color:'white',marginBottom:10}}>Question Nmber : 1 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Time Taken</h3> 
+            <div style={{color:'white',marginBottom:10}}>20 Minutes </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Average</h1> 80.5%
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Average</h3> 
+            <div style={{color:'white',marginBottom:10}}>80.5% </div>
           </div>
             </DialogContentText>
           </DialogContent>
@@ -578,7 +593,7 @@ const quizMode=()=>{
         <div style={{display:'flex',flexDirection:'row' ,marginLeft:170}}>
          
   
-  <div style={{width:500,height:400,borderWidth:1,borderColor:'blue',marginTop:20,borderRadius:10,boxShadow:20,
+  <div style={{width:500,height:400,borderWidth:1,borderColor:'white',marginTop:20,borderRadius:10,boxShadow:'3px 3px 9px black'
   }}>
   
   {questions.map((ques,index)=>{
@@ -628,25 +643,32 @@ const quizMode=()=>{
           keepMounted
           onClose={handleClose}
           aria-describedby="alert-dialog-slide-description"
+          style={{boxShadow:'3px 3px 9px black'}}
+          fullWidth={200}
         >
           <DialogTitle>{"Exam Result"}</DialogTitle>
-          <DialogContent>
+          <DialogContent style={{backgroundColor:"#040720",padding:40}}>
             <DialogContentText id="alert-dialog-slide-description">
             <div>
-            <ProgressBar now={80.5} />
-            <h1 style={{color:"#ff5f1f"}}>Score</h1> 2/3
+            <ProgressBar now={80.5} style={{marginBottom:20,marginTop:20}}/>
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Score</h3> 
+            <div style={{color:'white',marginBottom:10}}>2/3 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Correctly gotten qestions</h1> Question Nmber : 1,3
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Correctly gotten qestions</h3>
+            <div style={{color:'white',marginBottom:10}}> Question Nmber : 1,3 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Missed Qestions</h1>Question Nmber :  1
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Missed Qestions</h3> 
+            <div style={{color:'white',marginBottom:10}}>Question Nmber : 1 </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Time Taken</h1> 20 Minutes
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Time Taken</h3> 
+            <div style={{color:'white',marginBottom:10}}>20 Minutes </div>
           </div>
           <div>
-            <h1 style={{color:"#ff5f1f"}}>Average</h1> 80.5%
+            <h3 style={{color:"#ff5f1f",fontSize:14}}>Average</h3> 
+            <div style={{color:'white',marginBottom:10}}>80.5% </div>
           </div>
             </DialogContentText>
           </DialogContent>
@@ -749,9 +771,8 @@ const quizMode=()=>{
 
         <div>
   
-<div style={{backgroundColor:"#ff5f1f",width:800,height:50,color:'white',textAlign:"center",borderWidth:1,backgroundColor:"#ff5f1f"
-, borderRadius:10,marginLeft:130}}>
-  This is the exam instruction where the student gets information about the exam they are taking
+<div style={{width:800,height:50,color:'white',textAlign:"center",marginLeft:80}}>
+ 
   <div > 
           <Button onClick={()=>{setExamTypeTwo('Exam Mode')}}>Exam Mode</Button>
           <Button onClick={()=>{setExamTypeTwo("Quiz Mode")}}>Quiz Mode</Button>

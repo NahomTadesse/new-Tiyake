@@ -9,6 +9,7 @@ import StudentExamPageTwo from './StudentExamPageTwo';
 import Button from '@mui/material/Button';
 import { BedTwoTone } from '@mui/icons-material';
 
+
 const examType = React.createContext();
 
 export default function StudentExamPageOne() {
@@ -18,7 +19,10 @@ export default function StudentExamPageOne() {
     const [ExamType, setExamType] = React.useState('');
     const [Field, setField] = React.useState('');
     const [NumberOfQuestions, setNumberOfQuestions] = React.useState('');
-    const [examTypeTwo , setExamTypeTwo] = React.useState('')
+    const [examTypeTwo , setExamTypeTwo] = React.useState('');
+    const [isSelectedExam,setSelectedExam] =  React.useState(false);
+    const [isSelectedQuiz,setSelectedQuiz] =  React.useState(false);
+    const [isSelectedPractice,setSelectedPractice] =  React.useState(false);
 
   const  data = [ExamType ,level ,NumberOfQuestions]
     const handleChange = (event) => {
@@ -239,10 +243,43 @@ return(
 
         <div style={{display:'flex',flexDirection:"row",marginBottom:80}}>
          
-<Button onClick={()=> setExamType('Exam Mode')} 
-style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}} > Exam Mode</Button>
-<Button onClick={()=> setExamType('Quiz Mode')}  style={{marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}}> Quiz Mode</Button>
-<Button onClick={()=> setExamType('Practice Mode')} style={{backgroundColor:"#ff5f1f",color:'white',width:200}}> Practice Mode</Button>
+<Button onClick={()=> 
+         {
+         setExamType('Exam Mode');
+        setSelectedExam(!isSelectedExam);
+        setSelectedQuiz(false)
+        setSelectedPractice(false)
+        }
+         } 
+style={
+  isSelectedExam ?
+  {marginRight:20,backgroundColor:"#040720",color:'white',width:200}
+  :
+  {marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}
+  } > Exam Mode</Button>
+
+<Button onClick={()=> {setExamType('Quiz Mode');setSelectedQuiz(!isSelectedQuiz); setSelectedExam(false);
+           setSelectedPractice(false) 
+        }} 
+
+style={
+  isSelectedQuiz ?
+  {marginRight:20,backgroundColor:"#040720",color:'white',width:200}
+  :
+  {marginRight:20,backgroundColor:"#ff5f1f",color:'white',width:200}
+  }> Quiz Mode</Button>
+
+<Button onClick={()=>{ setExamType('Practice Mode'); setSelectedPractice(!isSelectedPractice);
+         setSelectedExam(false);setSelectedQuiz(false)
+        
+        }}
+
+style={
+  isSelectedPractice ?
+  {backgroundColor:"#040720",color:'white',width:200}
+  :
+  {backgroundColor:"#ff5f1f",color:'white',width:200}
+  }> Practice Mode</Button>
 
 </div>
 <div >
