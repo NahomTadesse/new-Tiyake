@@ -1,7 +1,7 @@
 
 
 import * as React from 'react';
-
+import { ImageList } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -45,13 +45,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     return { name, calories, fat, carbs, protein };
   }
   
-  const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-  ];
+
   
 export default function LeaderBoard(){
 
@@ -78,16 +72,46 @@ const students = [
 
 ]
 
+const stuCards =()=>{
+
+ return students.map((student)=>{
+    return(
+      <div style={{boxShadow:'3px 3px 9px black',marginLeft:10,marginRight:10,marginBottom:20,marginTop:10,padding:5}}>
+<div style={{display:'flex',flexDirection:'row'}}>
+<div style={{fontsize:14,fontWeight:'bolder'}}>{student.Rank}-</div>  
+<div style={{fontsize:14,marginLeft:5}}>{student.Name}</div>
+<div style={{}}>
+{student.Rank <= 3 && 
+                    <img src={starImg} alt="" height={20} width={20} style={{marginLeft:10,top:2}}/>
+                    
+                  }
+                  </div>
+  </div>
+
+  <div style={{display:'flex'}}>
+
+<div style={{fontsize:14,fontWeight:"bold",marginLeft:20}}>{student.Points} Points</div>
+  </div>
+
+  <div style={{display:'flex'}}>
+
+<div style={{fontsize:14,fontWeight:"bold",marginLeft:20,marginTop:5}}>Award :{' '}{student.Award}</div>
+  </div>
+
+      </div>
+    )
+  })
+}
 
     return(
         <div >
-<div style={{display:'flex',justifyContent:"center"}}>
+{/* <div style={{display:'flex',justifyContent:"center"}}>
           <div style={{textAlign:'center',fontSize:24,marginTop:10,marginBottom:10,fontWeight:'bold'}}>
             TOP 50 STUDENTS
           </div>
           <img src={trophyImg} alt="" height={50} width={50}/>
           </div>
-        {/* <Navbar/> */}
+     
         <TableContainer component={Paper} sx={{ height: window.innerHeight, maxWidth: 1100,marginLeft:10,marginRight:10 }}>
         <Table sx={{}} stickyHeader aria-label="sticky table">
           <TableHead>
@@ -126,7 +150,21 @@ const students = [
           </TableBody>
         </Table>
       </TableContainer>
-      {/* <Footer/> */}
+     */}
+<div style={{display:'flex',justifyContent:"center"}}>
+          <div style={{textAlign:'center',fontSize:24,marginTop:10,marginBottom:5,fontWeight:'bold'}}>
+            TOP 50 STUDENTS
+          </div>
+          {/* <img src={trophyImg} alt="" height={50} width={50}/> */}
+          </div>
+     <div style={{width:'90%',marginLeft:30,marginTop:20,borderRadius:10,borderWidth:1
+     ,borderColor:'white',boxShadow:'3px 3px 9px black',marginBottom:20}}>
+
+     <ImageList cols ={3} >
+{stuCards()}
+</ImageList>
+
+     </div>
       </div>
     )
 }

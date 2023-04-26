@@ -120,7 +120,7 @@ return(
       <FormLabel id="demo-radio-buttons-group-label">{`${[index +1]}. ${ques.question}`}</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue={ques.Answer}
+        value={ques.Answer}
         name="radio-buttons-group"
         style={{marginBottom:30,marginLeft:20}}
       >

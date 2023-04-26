@@ -8,6 +8,7 @@ import TeacherFilter from './TeacherFilter';
 import rankingImg from '../assets/images/ranking.png'
 import teacherImg from '../assets/images/teacher.png'
 import examImg from '../assets/images/exam.png'
+import StudentHistory from './StudentHistory'
 
 export default function DashBoard(){
     const [showExam,setShowExam] = useState(false)
@@ -15,7 +16,7 @@ export default function DashBoard(){
     const [showLeaderboard,setShowLeaderboard] = useState(true)
     const [showTeacherProfile, setShowTeacherProfile] = useState(false);
     const [showFilter,setShowFilter] = useState(false)
-
+    const [showHistory,setShowHistory] = useState(false)
     return(
         <div style={{display:'flex',flexDirection:"row"}}>
 
@@ -65,7 +66,9 @@ export default function DashBoard(){
                                             setShowProfile(false); 
                                             setShowLeaderboard(false); 
                                             setShowTeacherProfile(false);
-                                            setShowFilter(false)}} 
+                                            setShowFilter(false);
+                                            setShowHistory(false)
+                                        }} 
                                             style={{ color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:200,marginTop:20,
                                             marginLeft:20}}>
                                             Take Exam
@@ -80,11 +83,9 @@ export default function DashBoard(){
                                             setShowProfile(false); 
                                             setShowLeaderboard(false); 
                                             setShowTeacherProfile(false);
-                                            setShowFilter(true)}}>
+                                            setShowFilter(true);  setShowHistory(false)}}>
                                                  Teachers
-                            {/* <img src={teacherImg} 
-                                alt="" height={30} width={30}
-                                style={{marginLeft:5,marginBottom:10}}/>  */}
+                         
                         </Button>
                     </div>
                     <div style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}>
@@ -94,21 +95,31 @@ export default function DashBoard(){
                                             setShowProfile(false); 
                                             setShowLeaderboard(true); 
                                             setShowTeacherProfile(false);
-                                            setShowFilter(false)}}>
+                                            setShowFilter(false);  setShowHistory(false)}}>
                                                  Leader Board
-                            {/* <img src={rankingImg} 
-                                alt="" height={30} 
-                                width={30} 
-                                style={{marginLeft:5,
-                                        marginBottom:10}}/>  */}
+                          
+                        </Button>
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "row", marginBottom: 20 }}>
+                        <Button onClick={()=>{setShowExam(false); 
+                                            setShowProfile(false); 
+                                            setShowLeaderboard(false); 
+                                            setShowTeacherProfile(false);
+                                            setShowFilter(false);  setShowHistory(true)}} 
+                                            style={{color: "#ff5f1f",boxShadow:'3px 3px 9px black' ,width:'120%', marginLeft:20}}>
+                                            History
+                            {/* <img src={examImg} alt="" height={30} width={30} style={{marginLeft:5}}/>  */}
                         </Button>
                     </div>
                 {/* <Button style={{color:'white'}} onClick={()=>{setShowExam(false); setShowProfile(false); setShowLeaderboard(false); setShowTeacherProfile(true)}}> Leader Board</Button> */}
                 </div>
+                
+                
             </div>
+            
             <div style={{width:window.innerWidth}}>
                 {
-                    showExam ? <StudentExam/> : showProfile ? <TeachersProfile/>: showLeaderboard ? <Leaderboard/>: showFilter ? <TeacherFilter/> : ''
+                    showExam ? <StudentExam/> : showProfile ? <TeachersProfile/>: showLeaderboard ? <Leaderboard/>: showFilter ? <TeacherFilter/> : showHistory ? <StudentHistory/> : ''
                 }
             </div>
         </div>
